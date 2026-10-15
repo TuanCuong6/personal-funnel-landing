@@ -1,72 +1,99 @@
-# Personal Funnel - Landing Page
+# Personal Funnel Landing Page
 
-Landing page cho hệ thống Personal Funnel - Hiển thị danh sách phòng trọ với thiết kế đẹp, chống cướp khách.
+Public-facing landing page for rental property listings.
 
-## 🎨 Features
+## Tech Stack
 
-- ✨ Giao diện đẹp theo Water Element theme
-- 📱 Responsive design
-- 🔗 Zalo CTA buttons (Sticky + mỗi phòng)
-- 🖼️ Image gallery với multiple images
-- 📍 Hiển thị khu vực (không địa chỉ chi tiết)
+- React 18
+- Vite
+- Tailwind CSS
+- Axios
 
-## 🚀 Quick Start
+## Features
 
-### Local Development
+- Display rental property listings
+- Filter by district
+- Responsive design
+- Contact via Zalo button
+- Privacy protection (no exact addresses shown)
+
+## Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+## Local Development
 
 ```bash
 # Install dependencies
 npm install
 
 # Create .env file
-# VITE_API_URL=http://localhost:5025/api
-# VITE_DEFAULT_ZALO=https://zalo.me/YOUR_PHONE
+cp .env.example .env
 
 # Run dev server
 npm run dev
 ```
 
-App sẽ chạy tại: http://localhost:5173
+Development server: `http://localhost:5174`
 
-## 🔧 Configuration
+## Environment Variables
 
-Tạo file `.env`:
+Create `.env` file:
 
-```env
+```
 VITE_API_URL=http://localhost:5025/api
-VITE_DEFAULT_ZALO=https://zalo.me/0373971926
+VITE_DEFAULT_ZALO=https://zalo.me/YOUR_PHONE
 ```
 
-Cho production (Vercel):
-- `VITE_API_URL`: URL của Backend API trên Render
-- `VITE_DEFAULT_ZALO`: Link Zalo của bạn
+For production:
 
-## 📦 Deploy to Vercel
+```
+VITE_API_URL=https://your-backend.onrender.com/api
+VITE_DEFAULT_ZALO=https://zalo.me/YOUR_PHONE
+```
 
-1. Connect GitHub repo
-2. Framework Preset: Vite
-3. Root Directory: `/` (hoặc để trống)
-4. Build Command: `npm run build`
-5. Output Directory: `dist`
-6. Add Environment Variables (xem phần Configuration)
+## Build
 
-## 🗂️ Project Structure
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Deployment
+
+Deployed on Vercel (Free tier)
+
+### Deploy Steps
+
+1. Push to GitHub
+2. Import project on Vercel
+3. Set environment variables
+4. Deploy
+
+Production URL: `https://thuephonghn.vercel.app`
+
+## Project Structure
 
 ```
 src/
-├── components/
-│   ├── Header.jsx
-│   ├── Hero.jsx
-│   ├── RoomList.jsx
-│   ├── RoomCard.jsx
-│   ├── StickyZalo.jsx
-│   └── Footer.jsx
-├── services/
-│   └── api.js
-├── App.jsx
-└── App.css
+├── components/       # React components
+├── pages/           # Page components
+├── services/        # API services
+├── utils/           # Utility functions
+└── App.jsx          # Main app component
 ```
 
-## 📝 License
+## Key Components
 
-MIT
+- **PropertyList** - Display property cards
+- **PropertyCard** - Individual property card
+- **FilterBar** - Filter by district, price, etc.
+- **ContactButton** - Zalo contact button
+
+## License
+
+Private - All rights reserved
