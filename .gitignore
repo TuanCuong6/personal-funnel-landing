@@ -1,29 +1,57 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build
+dist/
+build/
+.next/
+out/
+
+# SENSITIVE: Environment variables
+.env
+.env.*
+!.env.example
+*.env
+
+# SENSITIVE: Config files
+config.local.js
+config.production.js
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
 # Logs
-logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# SENSITIVE: Deployment docs
+DEPLOYMENT*.md
+*GUIDE*.md
+*guide*.md
 
-# Environment variables
-.env
-.env.local
-.env.production
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary
+*.tmp
+.temp/
