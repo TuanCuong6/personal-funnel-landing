@@ -241,17 +241,14 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 32px;
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 48px;
-  align-items: start;
   position: relative;
   z-index: 1;
 }
 
-/* Hero Content (Left) */
+/* Hero Content */
 .hero-content {
   padding-top: 20px;
+  max-width: 700px;
 }
 
 .hero-location {
@@ -364,10 +361,12 @@ body {
   color: var(--primary);
 }
 
-/* Hero Sidebar (Right) - Why Section */
-.hero-sidebar {
-  position: relative;
-  padding-top: 20px;
+/* ========== ROOMS WITH SIDEBAR LAYOUT ========== */
+.rooms-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: start;
 }
 
 .why-card {
@@ -553,9 +552,14 @@ body {
 /* Rooms Grid */
 .rooms-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-bottom: 64px;
+}
+
+/* Why Sidebar (bên phải rooms) */
+.why-sidebar {
+  position: sticky;
+  top: 100px;
 }
 
 /* ========== PROPERTY CARD ========== */
@@ -956,18 +960,20 @@ body {
     display: block;
   }
 
-  .hero-container {
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .rooms-with-sidebar {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .hero-sidebar {
+  .why-sidebar {
+    position: relative;
+    top: 0;
     max-width: 500px;
     margin: 0 auto;
-  }
-
-  .hero-title {
-    font-size: 42px;
   }
 
   .rooms-grid {
