@@ -238,7 +238,7 @@ body {
 }
 
 .hero-container {
-  max-width: 1440px;
+  max-width: 1520px;
   margin: 0 auto;
   padding: 0 48px;
   position: relative;
@@ -501,7 +501,7 @@ body {
 }
 
 .rooms-container {
-  max-width: 1440px;
+  max-width: 1520px;
   margin: 0 auto;
   padding: 0 48px;
 }
@@ -716,7 +716,7 @@ body {
 }
 
 .bottom-cta-container {
-  max-width: 1240px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 48px;
   background: white;
@@ -893,7 +893,7 @@ body {
 }
 
 .footer-container {
-  max-width: 1440px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 48px;
 }
