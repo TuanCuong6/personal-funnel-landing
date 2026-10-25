@@ -238,9 +238,9 @@ body {
 }
 
 .hero-container {
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 48px;
   position: relative;
   z-index: 1;
 }
@@ -265,7 +265,7 @@ body {
 }
 
 .hero-title {
-  font-size: 52px;
+  font-size: 58px;
   font-weight: 800;
   line-height: 1.15;
   color: var(--navy);
@@ -279,11 +279,11 @@ body {
 }
 
 .hero-description {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 32px;
-  max-width: 540px;
+  max-width: 600px;
 }
 
 /* Hero Benefits */
@@ -364,8 +364,8 @@ body {
 /* ========== ROOMS WITH SIDEBAR LAYOUT ========== */
 .rooms-with-sidebar {
   display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 32px;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -501,9 +501,9 @@ body {
 }
 
 .rooms-container {
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 48px;
 }
 
 /* Section Header */
@@ -517,7 +517,7 @@ body {
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--navy);
   letter-spacing: -0.01em;
@@ -525,7 +525,7 @@ body {
 }
 
 .section-subtitle {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-secondary);
 }
 
@@ -642,7 +642,7 @@ body {
 }
 
 .property-title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 650;
   color: var(--text-primary);
   line-height: 1.4;
@@ -663,7 +663,7 @@ body {
 }
 
 .property-price {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 16px;
@@ -682,7 +682,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
 }
 
@@ -716,7 +716,7 @@ body {
 }
 
 .bottom-cta-container {
-  max-width: 1100px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 48px;
   background: white;
@@ -893,9 +893,9 @@ body {
 }
 
 .footer-container {
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 48px;
 }
 
 .footer-logo {
