@@ -1,0 +1,1075 @@
+# DESIGN SPECIFICATION — THUÊ PHÒNG BẮC TỪ LIÊM
+## Personal Rental Landing Page & Lead Conversion Website
+
+**Phiên bản:** 1.0  
+**Loại sản phẩm:** Personal Funnel / Rental Listing Website  
+**Ngôn ngữ giao diện:** Tiếng Việt  
+**Thiết bị:** Desktop, Tablet, Mobile  
+**Phong cách:** Modern, Clean, Premium, Trustworthy, Conversion-focused  
+**Mục tiêu chính:** Giới thiệu phòng cho thuê chuyên nghiệp, tạo sự tin tưởng và chuyển đổi khách truy cập thành khách liên hệ qua Zalo cá nhân.
+
+---
+
+# 1. TỔNG QUAN SẢN PHẨM
+
+## 1.1. Ý tưởng sản phẩm
+
+Xây dựng một website giới thiệu phòng trọ, căn hộ mini và homestay tại khu vực Bắc Từ Liêm, Hà Nội.
+
+Website hoạt động như một landing page cá nhân dành cho người tư vấn cho thuê phòng, thay vì chuyển khách sang một website tổng hợp nguồn phòng của bên thứ ba.
+
+Tên thương hiệu hiển thị trên giao diện:
+
+**Thuê Phòng Bắc Từ Liêm**
+
+Slogan:
+
+**Phòng đẹp – Cuộc sống tốt hơn!**
+
+Thông điệp phụ:
+
+- Tổng hợp phòng trọ, căn hộ mini, homestay chất lượng.
+- Giá tốt, thông tin minh bạch.
+- Hỗ trợ xem phòng nhanh chóng.
+- Tư vấn trực tiếp qua Zalo cá nhân.
+
+## 1.2. Mục tiêu UX
+
+Thiết kế cần giải quyết bốn vấn đề:
+
+1. Khách truy cập có thể nhanh chóng tìm được phòng phù hợp với ngân sách.
+2. Hình ảnh phòng phải đủ lớn, đẹp và chân thực để tạo mong muốn xem phòng.
+3. Khách không cần biết địa chỉ chính xác ngay từ đầu; chỉ hiển thị khu vực, tên đường hoặc địa danh lân cận ở mức phù hợp.
+4. Mọi điểm chuyển đổi quan trọng đều hướng khách liên hệ qua Zalo cá nhân của người đăng tin.
+
+## 1.3. Đối tượng sử dụng
+
+- Sinh viên tìm phòng gần trường đại học.
+- Người đi làm tìm phòng gần nơi làm việc.
+- Người cần căn hộ mini đầy đủ nội thất.
+- Người tìm homestay hoặc phòng ở ngắn hạn nếu có nguồn phòng phù hợp.
+
+## 1.4. Nguyên tắc thiết kế
+
+- Ưu tiên hình ảnh phòng đẹp hơn các yếu tố trang trí không cần thiết.
+- Thông tin giá thuê phải nổi bật, dễ đọc.
+- CTA liên hệ phải dễ nhận biết trên mọi màn hình.
+- Không sử dụng giao diện rối mắt hoặc quá nhiều màu.
+- Không sử dụng các pop-up quảng cáo gây khó chịu.
+- Không hiển thị số điện thoại của bên quản lý nguồn phòng.
+- Không hiển thị địa chỉ nhà, số phòng hoặc tọa độ chính xác nếu chưa được phép công khai.
+- Không tự tạo đánh giá, số lượng phòng, thành tích hoặc cam kết không có dữ liệu thực tế.
+
+---
+
+# 2. DESIGN SYSTEM — HỆ THỐNG THIẾT KẾ
+
+## 2.1. Bảng màu
+
+Sử dụng bảng màu xanh dương và trắng tương tự ảnh thiết kế tham khảo.
+
+| Token | Mã màu | Mục đích |
+|---|---|---|
+| Primary | #0878F9 | Nút chính, liên kết, CTA |
+| Primary Hover | #0668DE | Trạng thái hover của nút |
+| Primary Light | #EAF3FF | Nền nhấn nhẹ |
+| Primary Soft | #F3F8FF | Nền các khu vực nổi bật |
+| Navy | #102F5E | Tiêu đề chính |
+| Text Primary | #183153 | Nội dung chính |
+| Text Secondary | #61748F | Mô tả, thông tin phụ |
+| Border | #DFEAF7 | Viền card, input |
+| Background | #FFFFFF | Nền chính |
+| Section Background | #F7FAFE | Nền các section xen kẽ |
+| Success | #15966A | Trạng thái tích cực nếu cần |
+| Price | #0878F9 | Giá thuê |
+
+Màu xanh Zalo có thể sử dụng riêng cho biểu tượng hoặc thành phần nhận diện Zalo khi cần. Không thay toàn bộ màu chủ đạo của website bằng màu xanh lá.
+
+### Nguyên tắc sử dụng màu
+
+- 70–80% giao diện là trắng và các sắc trắng xanh rất nhạt.
+- Xanh dương được dùng cho CTA, giá tiền, icon và các điểm nhấn.
+- Navy được dùng cho tiêu đề lớn nhằm tạo độ tương phản.
+- Không sử dụng gradient đậm trên toàn bộ trang.
+- Có thể sử dụng gradient xanh nhạt ở hero hoặc nền trang trí nhưng phải giữ chữ dễ đọc.
+
+## 2.2. Typography
+
+Ưu tiên font sans-serif hỗ trợ tiếng Việt tốt.
+
+Font đề xuất:
+
+- Inter.
+- Be Vietnam Pro.
+
+Nếu sử dụng Google Fonts, ưu tiên Be Vietnam Pro cho giao diện tiếng Việt hoặc Inter nếu dự án đã dùng sẵn.
+
+### Kích thước chữ Desktop
+
+| Thành phần | Kích thước đề xuất | Độ đậm |
+|---|---:|---|
+| Hero heading | 48–56px | 700–800 |
+| Section heading | 28–32px | 700 |
+| Property title | 15–17px | 600–700 |
+| Giá thuê | 19–22px | 700 |
+| Body text | 14–16px | 400 |
+| Metadata | 12–13px | 400–500 |
+| Button | 14–15px | 600 |
+
+### Kích thước chữ Mobile
+
+- Hero heading: 30–36px.
+- Section heading: 22–26px.
+- Property title: 14–16px.
+- Giá thuê: 18–20px.
+- Body text: 14–15px.
+- Metadata: 12–13px.
+
+Không dùng quá nhiều kiểu font hoặc font trang trí. Chỉ dùng font viết tay cho một chi tiết trang trí nhỏ nếu thật sự phù hợp.
+
+## 2.3. Spacing system
+
+Sử dụng hệ thống khoảng cách nhất quán theo bội số 4px.
+
+- 4px: khoảng cách icon và chữ.
+- 8px: khoảng cách giữa các thành phần nhỏ.
+- 12px: khoảng cách giữa metadata.
+- 16px: padding card nhỏ.
+- 20–24px: padding card chính.
+- 32px: khoảng cách giữa các nhóm nội dung.
+- 48–64px: khoảng cách giữa các section.
+- 72–96px: khoảng cách hoặc vùng đệm lớn ở hero Desktop khi phù hợp.
+
+## 2.4. Border radius và shadow
+
+- Button: 10–14px.
+- Input: 10–12px.
+- Property card: 12–16px.
+- Image gallery: 12–16px.
+- Floating contact button: dạng pill.
+- Modal: 16–20px.
+
+Shadow chỉ nhẹ, ví dụ:
+
+`0 4px 18px rgba(20, 70, 130, 0.07)`
+
+Border mặc định:
+
+`1px solid #DFEAF7`
+
+Tránh shadow đen đậm, viền dày hoặc hiệu ứng glassmorphism quá mức.
+
+## 2.5. Icon
+
+Sử dụng một bộ icon thống nhất như Lucide.
+
+Các icon thường dùng:
+
+- Home.
+- MapPin.
+- BedDouble.
+- Ruler.
+- Bath.
+- Wifi.
+- CarFront.
+- Wind.
+- MessageCircle.
+- ShieldCheck.
+- Clock.
+- Search.
+- SlidersHorizontal.
+- Heart.
+- ChevronRight.
+
+Icon có kích thước 16–22px tùy thành phần. Không trộn icon outline và icon filled từ nhiều bộ khác nhau một cách tùy tiện.
+
+---
+
+# 3. LAYOUT SYSTEM
+
+## 3.1. Desktop
+
+Thiết kế theo desktop-first reference nhưng phải responsive hoàn chỉnh.
+
+- Breakpoint Desktop lớn: từ 1280px.
+- Desktop tiêu chuẩn: 1024–1279px.
+- Tablet: 768–1023px.
+- Mobile: dưới 768px.
+- Mobile nhỏ: dưới 375px.
+
+Container chính:
+
+- Max-width: 1320px.
+- Có thể tăng đến 1400px trên màn hình rộng nếu ảnh và nội dung vẫn cân đối.
+- Padding ngang Desktop: 32–48px.
+- Padding ngang Mobile: 16px.
+
+Không kéo nội dung sát mép màn hình.
+
+## 3.2. Header
+
+Header nền trắng, chiều cao khoảng 68–76px trên Desktop.
+
+Bên trái:
+
+- Logo hình ngôi nhà màu xanh.
+- Tên thương hiệu “Thuê Phòng Bắc Từ Liêm”.
+- Tagline nhỏ “Phòng đẹp – Cuộc sống tốt hơn!” nếu đủ không gian.
+
+Ở giữa:
+
+- Trang chủ.
+- Danh sách phòng.
+- Về tôi.
+- Khu vực.
+
+Bên phải:
+
+- Nút “Liên hệ Zalo”.
+
+Trạng thái:
+
+- Link đang active có màu xanh và underline mảnh.
+- Header có thể sticky khi cuộn trang.
+- Không để header quá cao.
+- Mobile chuyển thành logo bên trái và nút menu bên phải.
+- Có thể giữ CTA Zalo nhỏ trên Mobile nếu không làm chật header.
+
+## 3.3. Footer
+
+Footer nền navy hoặc xanh đậm, nội dung trắng.
+
+Các thành phần:
+
+- Logo và tên thương hiệu.
+- Slogan.
+- Liên kết điều hướng.
+- Nút liên hệ Zalo.
+- Khu vực hoạt động.
+- Copyright.
+
+Không tự thêm thông tin pháp lý, địa chỉ văn phòng hoặc thông tin doanh nghiệp chưa có thật.
+
+---
+
+# 4. MÀN HÌNH 01 — TRANG CHỦ / LANDING PAGE
+
+Đây là trang quan trọng nhất và cần được đầu tư hình ảnh nhiều nhất.
+
+## 4.1. Mục tiêu
+
+Trong 5 giây đầu, khách truy cập phải hiểu:
+
+- Website chuyên tìm phòng tại Bắc Từ Liêm.
+- Có nhiều loại phòng để lựa chọn.
+- Có thể xem giá và hình ảnh.
+- Có thể nhắn Zalo để được tư vấn.
+
+## 4.2. Bố cục tổng thể
+
+Thứ tự các section:
+
+1. Header.
+2. Hero section.
+3. Thanh thống kê hoặc điểm nổi bật.
+4. Khu vực tìm kiếm nhanh.
+5. Danh sách phòng nổi bật.
+6. Lý do nên liên hệ qua website.
+7. Khu vực hoặc địa điểm phổ biến.
+8. CTA liên hệ cuối trang.
+9. Footer.
+
+Có thể điều chỉnh thứ tự giữa thanh tìm kiếm và thống kê nếu giúp bố cục cân đối hơn.
+
+## 4.3. Hero section
+
+Chiều cao Desktop khoảng 430–500px, tùy kích thước ảnh và nội dung.
+
+Chia bố cục thành hai vùng:
+
+**Vùng trái: 40–48%**
+
+- Nhãn nhỏ: “Tìm phòng dễ dàng, an tâm thuê”.
+- Heading lớn:
+
+  “Tìm phòng đẹp  
+  Bắc Từ Liêm dễ dàng”
+
+- Có thể tô xanh cụm “dễ dàng”.
+- Mô tả:
+
+  “Tổng hợp phòng trọ, căn hộ mini, homestay chất lượng.”
+
+  “Giá tốt – Thông tin rõ ràng – Hỗ trợ xem phòng nhanh.”
+
+- Ba lợi ích ngắn:
+  - Hình ảnh phòng thực tế.
+  - Hỗ trợ tư vấn tận tâm.
+  - Liên hệ trực tiếp qua Zalo.
+- CTA chính: “Nhắn Zalo ngay”.
+
+**Vùng phải: 52–60%**
+
+- Ảnh phòng ngủ hoặc căn hộ cao cấp, sáng, gọn gàng.
+- Có cửa sổ lớn, ánh sáng tự nhiên, nội thất gỗ sáng, ga giường trắng và điểm nhấn xanh dương.
+- Ảnh chiếm phần lớn chiều cao hero.
+- Có thể dùng gradient trắng ở cạnh trái để hòa ảnh với nền chữ.
+- Không đặt chữ quan trọng lên vùng ảnh quá phức tạp.
+
+Phong cách ảnh phải gần với ảnh chụp nội thất thực tế, không giống tranh minh họa hoặc ảnh 3D hoạt hình.
+
+## 4.4. Thanh thống kê
+
+Ngay sau Hero, tạo một dải nền xanh nhạt hoặc trắng.
+
+Có thể hiển thị ba chỉ số:
+
+- Số phòng đang đăng.
+- Số khu vực hỗ trợ.
+- Tỷ lệ hoặc cam kết về hình ảnh thực tế nếu có cơ sở xác minh.
+
+Nếu chưa có dữ liệu thật, dùng các điểm nổi bật không mang tính thống kê, ví dụ:
+
+- Nhiều lựa chọn.
+- Hỗ trợ xem phòng.
+- Tư vấn qua Zalo.
+
+Không hard-code số liệu giả để làm đẹp giao diện.
+
+## 4.5. Khu vực tìm kiếm nhanh
+
+Tạo một thanh tìm kiếm nằm trong container riêng, nền trắng, bo góc 12–16px và shadow nhẹ.
+
+Các trường:
+
+- Khu vực.
+- Loại phòng.
+- Khoảng giá.
+- Nút “Tìm kiếm”.
+
+Ví dụ loại phòng:
+
+- Tất cả.
+- Phòng trọ.
+- Căn hộ mini.
+- Homestay.
+
+Ví dụ khoảng giá:
+
+- Dưới 2 triệu.
+- 2–3 triệu.
+- 3–5 triệu.
+- Trên 5 triệu.
+
+Trên Desktop, các trường nằm cùng một hàng. Trên Mobile, xếp thành các hàng hoặc mở bộ lọc dạng bottom sheet.
+
+## 4.6. Section phòng nổi bật
+
+Tiêu đề:
+
+“Phòng nổi bật”
+
+Mô tả:
+
+“Những phòng đẹp, phù hợp với nhiều nhu cầu và ngân sách.”
+
+Nút phụ: “Xem tất cả phòng”.
+
+Desktop:
+
+- 4 card mỗi hàng ở màn hình rộng.
+- 3 card mỗi hàng nếu container nhỏ hơn.
+- Khoảng cách giữa card: 16–24px.
+
+Mỗi Property Card bao gồm:
+
+1. Ảnh phòng tỷ lệ khoảng 4:3.
+2. Nhãn loại phòng ở góc trên trái.
+3. Nút yêu thích ở góc trên phải nếu có chức năng này.
+4. Tên phòng.
+5. Khu vực ở mức công khai.
+6. Giá thuê nổi bật.
+7. Diện tích.
+8. Nội thất hoặc tiện ích.
+9. Nút “Liên hệ Zalo”.
+
+Ví dụ nội dung minh họa:
+
+- “Phòng trọ gần ĐH Tài nguyên và Môi trường”.
+- “Căn hộ mini đầy đủ nội thất”.
+- “Homestay xinh xắn, gần công viên”.
+- “Phòng trọ thoáng mát, giá sinh viên”.
+
+Giá và thông tin phải lấy từ dữ liệu phòng thực tế khi tích hợp backend.
+
+Không để card quá cao hoặc có quá nhiều dòng metadata. Tên phòng tối đa 2 dòng; phần tiện ích có thể rút gọn khi thiếu chỗ.
+
+## 4.7. Section lý do nên liên hệ
+
+Sử dụng một dải nền xanh nhạt hoặc card lớn chia thành 3–4 cột.
+
+Các lợi ích:
+
+- Thông tin phòng rõ ràng.
+- Hỗ trợ tư vấn nhanh.
+- Hẹn xem phòng thuận tiện.
+- Liên hệ trực tiếp qua Zalo.
+
+Mỗi mục gồm icon, tiêu đề ngắn và mô tả tối đa 2 dòng.
+
+Không đưa ra cam kết pháp lý hoặc bảo đảm chất lượng nếu không thể kiểm chứng.
+
+## 4.8. CTA cuối trang
+
+Dải CTA nền xanh nhạt, có thể kèm ảnh nội thất hoặc skyline Hà Nội nhẹ ở nền.
+
+Tiêu đề:
+
+“Bạn đang tìm phòng phù hợp?”
+
+Mô tả:
+
+“Nhắn Zalo để được tư vấn và sắp xếp lịch xem phòng.”
+
+Nút chính:
+
+“Nhắn Zalo ngay”.
+
+## 4.9. Footer
+
+Hiển thị thương hiệu, slogan, liên kết chính và CTA Zalo.
+
+Footer không nên chiếm diện tích quá lớn so với nội dung phòng.
+
+---
+
+# 5. MÀN HÌNH 02 — DANH SÁCH PHÒNG
+
+## 5.1. Mục tiêu
+
+Cho phép người thuê duyệt nhiều phòng, lọc theo nhu cầu và nhanh chóng liên hệ với người tư vấn.
+
+## 5.2. Bố cục
+
+Thứ tự:
+
+1. Header.
+2. Banner tiêu đề trang.
+3. Thanh tìm kiếm và bộ lọc.
+4. Thông tin số lượng kết quả.
+5. Khu vực sắp xếp.
+6. Lưới Property Card.
+7. Phân trang hoặc nút tải thêm.
+8. Footer.
+
+## 5.3. Banner tiêu đề
+
+Banner cao khoảng 110–160px.
+
+Có thể sử dụng nền xanh dương nhạt, ảnh skyline Hà Nội được làm tối nhẹ hoặc một dải gradient xanh trắng.
+
+Tiêu đề:
+
+“Danh sách phòng trọ, căn hộ”
+
+Mô tả:
+
+“Khám phá những lựa chọn phù hợp với nhu cầu và ngân sách của bạn.”
+
+Không sử dụng banner quá cao gây lãng phí không gian.
+
+## 5.4. Bộ lọc
+
+Bộ lọc Desktop:
+
+- Từ khóa.
+- Khu vực.
+- Loại phòng.
+- Giá tối thiểu.
+- Giá tối đa.
+- Diện tích.
+- Nội thất.
+- Nút “Áp dụng”.
+- Nút “Xóa bộ lọc”.
+
+Các bộ lọc nâng cao có thể mở trong popover hoặc panel riêng, tránh tạo một thanh filter quá dài.
+
+Có thanh sắp xếp:
+
+- Mới nhất.
+- Giá thấp đến cao.
+- Giá cao đến thấp.
+
+Nếu có dữ liệu phù hợp, bổ sung lựa chọn diện tích hoặc thời gian đăng.
+
+## 5.5. Lưới danh sách
+
+Desktop:
+
+- 4 cột ở màn hình rộng.
+- 3 cột ở màn hình tiêu chuẩn.
+- 2 cột trên tablet.
+- 1 cột hoặc 2 cột trên Mobile tùy chiều rộng và khả năng đọc.
+
+Trên màn hình Mobile nhỏ, ưu tiên card một cột nếu card hai cột làm tên phòng, giá và tiện ích quá chật.
+
+## 5.6. Trạng thái giao diện
+
+Cần thiết kế các trạng thái:
+
+- Đang tải danh sách.
+- Có kết quả.
+- Không có phòng phù hợp.
+- Lỗi tải dữ liệu.
+- Không có ảnh.
+- Phòng đã ngừng cho thuê.
+
+Thông báo khi không có kết quả:
+
+“Chưa tìm thấy phòng phù hợp với bộ lọc của bạn.”
+
+Có nút “Xóa bộ lọc” và “Nhắn Zalo để được hỗ trợ tìm phòng”.
+
+---
+
+# 6. MÀN HÌNH 03 — CHI TIẾT PHÒNG
+
+## 6.1. Mục tiêu
+
+Đây là màn hình giúp khách đánh giá phòng trước khi nhắn Zalo.
+
+Cần cung cấp đủ hình ảnh, giá thuê, tiện ích và khu vực mà không công khai địa chỉ riêng tư.
+
+## 6.2. Bố cục Desktop
+
+Header.
+
+Breadcrumb:
+
+Trang chủ > Danh sách phòng > Chi tiết phòng.
+
+Phần nội dung chính chia hai cột:
+
+**Cột trái: 60–65%**
+
+- Gallery ảnh phòng.
+- Ảnh chính lớn.
+- Các ảnh phụ nhỏ.
+- Nút xem toàn bộ ảnh.
+- Khu vực mô tả chi tiết.
+
+**Cột phải: 35–40%**
+
+Một card thông tin nổi bật:
+
+- Tên phòng.
+- Khu vực.
+- Giá thuê/tháng.
+- Diện tích.
+- Loại phòng.
+- Tình trạng nội thất.
+- Tiện ích chính.
+- CTA “Nhắn Zalo để xem phòng”.
+- CTA phụ “Đặt lịch xem phòng”.
+
+Card có thể sticky trong một khoảng cuộn hợp lý nhưng phải tránh che nội dung hoặc footer.
+
+## 6.3. Gallery ảnh
+
+Ảnh chính chiếm khoảng 65–70% diện tích gallery.
+
+Các ảnh phụ nằm bên phải hoặc phía dưới.
+
+Tỷ lệ ảnh đề xuất:
+
+- Ảnh chính: 4:3 hoặc 5:4.
+- Ảnh phụ: 4:3.
+
+Khi nhấn ảnh, mở lightbox cho phép:
+
+- Xem ảnh kích thước lớn.
+- Chuyển ảnh trước/sau.
+- Đóng bằng nút X.
+- Đóng bằng phím Escape trên Desktop.
+
+Không bóp méo ảnh. Sử dụng object-fit phù hợp.
+
+## 6.4. Nội dung chi tiết
+
+Các section:
+
+### Thông tin cơ bản
+
+- Giá thuê.
+- Diện tích.
+- Loại phòng.
+- Nội thất.
+- Tình trạng phòng.
+- Tiền điện, nước và các phí khác nếu có dữ liệu.
+
+### Mô tả phòng
+
+Đoạn văn bản mô tả không gian, ánh sáng, nội thất và điểm nổi bật.
+
+### Tiện ích
+
+Ví dụ:
+
+- Điều hòa.
+- Giường và tủ.
+- Máy giặt.
+- Wi-Fi.
+- Chỗ để xe.
+- Nhà vệ sinh riêng.
+- Ban công.
+
+Chỉ hiển thị những tiện ích có thật.
+
+### Khu vực
+
+Có thể mô tả:
+
+- Tên đường hoặc khu vực.
+- Trường học, siêu thị hoặc địa điểm lân cận.
+- Khoảng cách ước tính nếu có nguồn dữ liệu đáng tin cậy.
+
+Không hiển thị số nhà, mã phòng hoặc tọa độ chính xác trên bản đồ công khai khi thông tin này cần được bảo vệ.
+
+### Chính sách và chi phí
+
+Nếu đã có dữ liệu:
+
+- Tiền cọc.
+- Thời hạn thuê.
+- Chi phí điện nước.
+- Phí dịch vụ.
+- Điều kiện nuôi thú cưng.
+- Thời điểm có thể chuyển vào.
+
+Không tự điền giá trị mặc định giả cho những trường chưa có thông tin.
+
+## 6.5. CTA chuyển đổi
+
+CTA chính:
+
+“Nhắn Zalo để xem phòng”.
+
+CTA phụ:
+
+“Đặt lịch xem phòng”.
+
+Khi nhấn CTA, website mở đúng tài khoản Zalo cá nhân được cấu hình.
+
+Có thể tạo nội dung tin nhắn gợi ý, ví dụ:
+
+“Chào bạn, mình muốn hỏi thêm về phòng [Tên phòng/Mã phòng].”
+
+Nếu nền tảng không hỗ trợ điền sẵn tin nhắn, chỉ cần mở trang liên hệ Zalo và cung cấp mã phòng để khách dễ trao đổi.
+
+Không chuyển khách sang trang của bên cung cấp nguồn phòng.
+
+## 6.6. Phòng tương tự
+
+Cuối trang hiển thị 3–4 phòng tương tự theo:
+
+- Khu vực.
+- Khoảng giá.
+- Loại phòng.
+
+Mỗi card tuân theo thiết kế Property Card dùng chung.
+
+---
+
+# 7. MÀN HÌNH 04 — LIÊN HỆ ZALO / MODAL ĐẶT LỊCH
+
+Đây là thành phần chuyển đổi quan trọng, không nhất thiết phải là một trang riêng.
+
+## 7.1. Zalo contact modal
+
+Modal nền trắng, bo góc 16–20px.
+
+Kích thước Desktop khoảng 400–480px.
+
+Nội dung:
+
+- Logo hoặc biểu tượng Zalo.
+- Tiêu đề “Liên hệ với mình qua Zalo”.
+- Mô tả “Nhắn tin để được tư vấn và hỗ trợ sắp xếp lịch xem phòng”.
+- Nút chính “Nhắn Zalo ngay”.
+- QR Zalo nếu có.
+- Hướng dẫn quét mã trên điện thoại.
+- Nút đóng ở góc trên phải.
+
+Trên Mobile, modal chuyển thành bottom sheet hoặc trang liên hệ gọn, không vượt quá chiều cao màn hình.
+
+QR code phải là mã thật do chủ tài khoản cung cấp. Không tạo QR trang trí giả.
+
+## 7.2. Luồng đặt lịch xem phòng
+
+Nếu triển khai đặt lịch trên website, form chỉ nên có các trường thực sự cần thiết:
+
+- Tên khách, không bắt buộc nếu không cần.
+- Phòng muốn xem.
+- Ngày dự kiến.
+- Khung giờ dự kiến.
+- Ghi chú, tùy chọn.
+
+CTA:
+
+“Tiếp tục qua Zalo”.
+
+Mục tiêu của form là chuẩn bị thông tin cho cuộc trao đổi, không thay thế hoàn toàn việc xác nhận lịch trực tiếp.
+
+Không hiển thị trạng thái “Đã đặt lịch thành công” khi backend chưa lưu lịch hoặc chưa có xác nhận thực sự.
+
+---
+
+# 8. GIAO DIỆN MOBILE
+
+Mobile không được chỉ là phiên bản Desktop thu nhỏ. Cần thiết kế lại bố cục để ưu tiên thao tác bằng ngón tay.
+
+## 8.1. Header Mobile
+
+- Logo nhỏ bên trái.
+- Nút menu bên phải.
+- CTA Zalo có thể nằm cạnh menu nếu đủ chỗ.
+- Menu mở dạng drawer hoặc dropdown.
+- Không để menu che hoàn toàn nội dung nếu không cần thiết.
+
+## 8.2. Hero Mobile
+
+Bố cục:
+
+1. Heading.
+2. Mô tả ngắn.
+3. CTA Zalo.
+4. Ảnh phòng.
+5. Các lợi ích ngắn.
+
+Có thể đặt ảnh phía dưới nội dung thay vì ép bố cục hai cột.
+
+Ảnh hero cần hiển thị rõ phòng và nội thất. Không crop mất chủ thể quan trọng.
+
+Heading tối đa khoảng 3 dòng ở màn hình nhỏ.
+
+## 8.3. Property Card Mobile
+
+Có hai biến thể:
+
+**Biến thể A — Card một cột**
+
+- Ảnh ngang ở trên.
+- Tên phòng.
+- Khu vực.
+- Giá thuê.
+- Tiện ích.
+- Nút Zalo toàn chiều rộng.
+
+Dùng cho màn hình nhỏ và các trang cần trình bày nhiều thông tin.
+
+**Biến thể B — Card hai cột**
+
+- Ảnh nằm phía trên.
+- Nội dung được rút gọn.
+- Giá và CTA ngắn gọn.
+
+Chỉ dùng khi chiều rộng đủ để chữ không bị vỡ hoặc khó đọc.
+
+## 8.4. Bộ lọc Mobile
+
+Nút “Lọc phòng” mở bottom sheet.
+
+Trong bottom sheet:
+
+- Khu vực.
+- Loại phòng.
+- Khoảng giá.
+- Diện tích.
+- Tiện ích.
+- Nút “Xóa”.
+- Nút “Xem kết quả”.
+
+Đặt số lượng kết quả trong CTA nếu có dữ liệu thật.
+
+## 8.5. Thanh liên hệ cố định
+
+Có thể tạo sticky bottom CTA ở các trang danh sách hoặc chi tiết phòng:
+
+- Nút “Nhắn Zalo”.
+- Nút “Đặt lịch xem” nếu cần.
+
+Chiều cao khoảng 60–72px, cộng safe-area inset của thiết bị.
+
+Yêu cầu:
+
+- Không che nội dung cuối trang.
+- Có padding-bottom tương ứng.
+- Không xuất hiện nếu modal khác đang mở.
+- Không gây khó khăn cho thao tác cuộn.
+
+## 8.6. Tiêu chuẩn tương tác
+
+- Vùng chạm mục tiêu khoảng 44×44px trở lên.
+- Input không quá nhỏ.
+- Button có trạng thái hover, focus, active và disabled phù hợp.
+- Hỗ trợ bàn phím khi nhập liệu.
+- Không dùng hover làm tương tác duy nhất.
+- Không tạo horizontal overflow.
+- Hình ảnh và chữ phải đủ tương phản.
+
+---
+
+# 9. QUY TẮC HÌNH ẢNH
+
+Hình ảnh là yếu tố quan trọng nhất sau giá thuê.
+
+## 9.1. Phong cách ảnh
+
+Ưu tiên ảnh phòng:
+
+- Sáng, tự nhiên.
+- Có ánh sáng từ cửa sổ.
+- Tông màu trung tính, gỗ sáng, trắng, be.
+- Điểm nhấn xanh dương nhẹ.
+- Nội thất được sắp xếp gọn gàng.
+- Có cảm giác sạch sẽ, rộng rãi và có thể sinh sống thực tế.
+
+Tránh:
+
+- Ảnh hoạt hình.
+- Ảnh quá bão hòa.
+- Phòng quá xa hoa không phù hợp nguồn phòng thực tế.
+- Ảnh bị lặp lại quá nhiều.
+- Watermark hoặc chữ chèn quá lớn.
+- Crop làm biến dạng không gian.
+
+## 9.2. Tỷ lệ ảnh
+
+- Hero: ảnh ngang lớn, khoảng 16:9 hoặc 3:2.
+- Property card: 4:3.
+- Gallery: 4:3 hoặc 5:4.
+- Ảnh Mobile: dùng ảnh responsive và object-position hợp lý.
+
+## 9.3. Khi chưa có ảnh thật
+
+Trong bản prototype, có thể dùng ảnh minh họa chất lượng cao.
+
+Khi đưa vào production:
+
+- Thay bằng ảnh phòng thực tế.
+- Không mô tả ảnh minh họa như ảnh thực tế của phòng.
+- Tối ưu dung lượng ảnh.
+- Sử dụng lazy loading cho ảnh phía dưới màn hình đầu tiên.
+- Cung cấp alt text có ý nghĩa.
+
+---
+
+# 10. COMPONENT LIBRARY
+
+Thiết kế các component dùng lại giữa các màn hình.
+
+## 10.1. Core components
+
+- `SiteHeader`
+- `MobileNavigation`
+- `SiteFooter`
+- `PrimaryButton`
+- `SecondaryButton`
+- `ZaloContactButton`
+- `SectionHeading`
+- `PropertyCard`
+- `PropertyGrid`
+- `PropertyGallery`
+- `PriceDisplay`
+- `LocationLabel`
+- `AmenityList`
+- `SearchBar`
+- `PropertyFilters`
+- `FilterBottomSheet`
+- `SortDropdown`
+- `Pagination`
+- `EmptyState`
+- `LoadingSkeleton`
+- `ErrorState`
+- `ZaloContactModal`
+- `AppointmentForm`
+- `StickyMobileContactBar`
+- `Breadcrumbs`
+
+## 10.2. Quy tắc component
+
+- Component có trách nhiệm rõ ràng.
+- Không lặp lại cùng một cấu trúc card ở nhiều file.
+- Các giá trị màu, spacing và typography dùng design token.
+- Dữ liệu phòng tách khỏi phần JSX.
+- Không hard-code link Zalo ở nhiều nơi.
+- Không viết toàn bộ website thành một component duy nhất.
+- Component tương tác phải có trạng thái loading, error và disabled phù hợp.
+
+---
+
+# 11. LUỒNG NGƯỜI DÙNG
+
+## Flow A — Từ trang chủ đến Zalo
+
+Trang chủ → Phòng nổi bật → Chi tiết phòng → Nhắn Zalo → Trao đổi với người tư vấn.
+
+## Flow B — Tìm phòng theo ngân sách
+
+Trang chủ → Chọn khoảng giá → Danh sách phòng → Chọn phòng → Liên hệ Zalo.
+
+## Flow C — Truy cập trực tiếp từ quảng cáo
+
+Link trang chi tiết phòng → Xem ảnh và giá → Xem khu vực → Nhắn Zalo.
+
+## Flow D — Mobile
+
+Landing page → Danh sách phòng → Chi tiết phòng → Sticky CTA → Zalo.
+
+Mọi luồng cần hạn chế số thao tác không cần thiết và giữ CTA dễ nhận biết.
+
+---
+
+# 12. YÊU CẦU RESPONSIVE VÀ ACCESSIBILITY
+
+- Không có horizontal scrollbar trên Mobile.
+- Grid thay đổi số cột theo chiều rộng.
+- Navigation chuyển sang mobile menu.
+- Modal và bottom sheet sử dụng được bằng bàn phím.
+- Ảnh có alt text.
+- Form có label và thông báo lỗi dễ hiểu.
+- Trạng thái focus dễ nhận biết.
+- Đảm bảo độ tương phản chữ và nền.
+- Không chỉ sử dụng màu để truyền tải trạng thái.
+- Tuân thủ các nguyên tắc WCAG 2.2 AA trong phạm vi phù hợp.
+- Tôn trọng `prefers-reduced-motion`.
+- Tránh animation quá nhiều hoặc kéo dài.
+
+---
+
+# 13. YÊU CẦU TÍCH HỢP VÀ CẤU HÌNH
+
+Đây là website public-facing; thông tin liên hệ và dữ liệu phòng cần được quản lý tập trung.
+
+## 13.1. Cấu hình thương hiệu
+
+Tạo một cấu hình dùng chung:
+
+- Tên website.
+- Logo.
+- Slogan.
+- Link Zalo.
+- QR Zalo.
+- Danh sách khu vực.
+- Màu chủ đạo.
+- Metadata SEO.
+
+Không đặt link Zalo trực tiếp trong hàng chục component.
+
+## 13.2. Dữ liệu phòng
+
+Mỗi phòng nên có:
+
+- ID.
+- Slug.
+- Tên phòng.
+- Mã phòng.
+- Loại phòng.
+- Giá thuê.
+- Diện tích.
+- Mô tả.
+- Danh sách tiện ích.
+- Danh sách ảnh.
+- Khu vực hiển thị công khai.
+- Trạng thái phòng.
+- Thời điểm đăng.
+- Trạng thái hiển thị.
+
+Địa chỉ chính xác, nếu cần quản lý nội bộ, phải được tách khỏi dữ liệu công khai và không đưa vào response public API khi không cần thiết.
+
+## 13.3. Link liên hệ Zalo
+
+- Sử dụng một URL Zalo hợp lệ được cấu hình từ tài khoản thật.
+- CTA ở header, property card, chi tiết phòng và footer đều sử dụng cùng cấu hình.
+- Nếu hỗ trợ tin nhắn gợi ý, phải kiểm tra tính tương thích của link và encode nội dung đúng cách.
+- Nếu link chưa được cấu hình, hiển thị thông báo hoặc CTA dự phòng phù hợp; không tạo URL giả.
+
+## 13.4. SEO cơ bản
+
+- Title và meta description riêng cho từng trang.
+- URL dễ đọc.
+- Open Graph image.
+- Canonical URL khi phù hợp.
+- Sitemap và robots.txt.
+- Nội dung mô tả rõ ràng.
+- Không đưa địa chỉ riêng tư hoặc dữ liệu nội bộ vào metadata.
+
+---
+
+# 14. CÁC TRẠNG THÁI PHẢI CÓ TRONG THIẾT KẾ
+
+Mỗi màn hình không chỉ có trạng thái hoàn chỉnh. Cần xem xét:
+
+1. Default.
+2. Loading.
+3. Empty.
+4. Error.
+5. Disabled.
+6. Hover và Focus.
+7. Mobile.
+8. Nội dung quá dài.
+9. Không có ảnh.
+10. Phòng đã hết hoặc ngừng cho thuê.
+
+Đặc biệt, phòng không còn khả dụng không được tiếp tục hiển thị như một lựa chọn đang cho thuê.
+
+---
+
+# 15. HƯỚNG DẪN TRIỂN KHAI DESIGN
+
+Thứ tự triển khai đề xuất:
+
+### Giai đoạn 1 — Design foundation
+
+Hoàn thiện màu sắc, typography, spacing, container và button.
+
+### Giai đoạn 2 — Shared components
+
+Xây dựng header, footer, Property Card, CTA Zalo và bộ lọc.
+
+### Giai đoạn 3 — Desktop screens
+
+Hoàn thiện trang chủ, danh sách phòng và chi tiết phòng.
+
+### Giai đoạn 4 — Conversion flow
+
+Hoàn thiện modal Zalo, form đặt lịch và các CTA.
+
+### Giai đoạn 5 — Mobile
+
+Thiết kế lại từng màn hình theo Mobile, không chỉ thu nhỏ Desktop.
+
+### Giai đoạn 6 — Polish
+
+Kiểm tra responsive, loading, empty states, ảnh, typography, accessibility và các lỗi tràn bố cục.
+
+---
+
+# 16. TIÊU CHÍ NGHIỆM THU
+
+Bản thiết kế đạt yêu cầu khi:
+
+- Có đầy đủ trang chủ, danh sách phòng, chi tiết phòng và giao diện liên hệ.
+- Giao diện thống nhất với phong cách xanh dương – trắng, hiện đại, sạch và cao cấp vừa phải.
+- Hình ảnh phòng là trọng tâm của từng card.
+- Giá thuê dễ nhìn.
+- CTA Zalo xuất hiện ở những vị trí chuyển đổi quan trọng.
+- Header, footer và Property Card dùng chung component.
+- Giao diện hiển thị tốt ở Desktop, Tablet và Mobile.
+- Bộ lọc có trạng thái và tương tác hợp lý.
+- Không xuất hiện địa chỉ chính xác trên giao diện public nếu chưa được phép công khai.
+- Không có link Zalo giả hoặc thông tin phòng không có thật.
+- Không có nội dung bị tràn, chữ bị cắt hoặc CTA bị che trên Mobile.
+- Giao diện prototype có dữ liệu mẫu rõ ràng và dễ thay thế bằng dữ liệu thật.
+
+**Kết quả mong muốn:** Một website cho thuê phòng có cảm giác chuyên nghiệp như sản phẩm thật, hình ảnh nổi bật, dễ sử dụng, tạo sự tin tưởng và tối ưu cho việc chuyển khách truy cập thành cuộc hội thoại Zalo.
