@@ -14,7 +14,6 @@ function Hero({ zaloLink }) {
         className="hero-background" 
         style={{ backgroundImage: `url(${bannerImage})` }}
       >
-        <div className="hero-overlay"></div>
       </div>
 
       <div className="hero-container">
