@@ -76,8 +76,7 @@ body {
 
 .header-container {
   max-width: 1200px;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 0 32px;
   height: 76px;
   display: flex;
@@ -225,8 +224,7 @@ body {
 
 .hero-container {
   max-width: 1600px;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 0 32px;
   position: relative;
   z-index: 1;
@@ -486,17 +484,12 @@ body {
 
 /* ========== ROOMS SECTION ========== */
 .rooms-section {
-  padding: 64px 0;
+  padding: 64px 32px;
   background: var(--bg-white);
-  display: flex;
-  justify-content: flex-start;
 }
 
 .rooms-container {
-  width: 100%;
-  max-width: 100%;
-  padding-left: 32px;
-  padding-right: 32px;
+  /* No centering, no max-width, pure left alignment */
 }
 
 /* Section Header */
@@ -894,25 +887,13 @@ body {
     font-size: 42px;
   }
 
-  .rooms-with-sidebar {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .why-sidebar {
-    position: relative;
-    top: 0;
-    max-width: 500px;
-    margin: 0 auto;
+  .rooms-section {
+    padding: 64px 24px;
   }
 
   .rooms-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-
-  .bottom-cta-actions {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -971,8 +952,8 @@ body {
     height: 18px;
   }
 
-  .rooms-container {
-    padding: 0 16px;
+  .rooms-section {
+    padding: 48px 16px;
   }
 
   .rooms-grid {
