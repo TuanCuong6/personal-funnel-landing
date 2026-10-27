@@ -484,7 +484,7 @@ body {
 
 /* ========== ROOMS SECTION ========== */
 .rooms-section {
-  padding: 64px 32px;
+  padding: 64px 32px 64px 0;
   background: var(--bg-white);
 }
 
