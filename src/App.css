@@ -484,13 +484,16 @@ body {
 
 /* ========== ROOMS SECTION ========== */
 .rooms-section {
-  padding: 64px 32px 64px 0;
-  background: var(--bg-white);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 0;
+  padding-right: 0;
   margin: 0;
+  background: var(--bg-white);
 }
 
 .rooms-container {
-  /* No centering, no max-width, pure left alignment */
+  /* Removed - not used */
 }
 
 /* Section Header */
@@ -499,8 +502,14 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: 32px;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.section-header-left {
+  text-align: left;
 }
 
 .section-title {
@@ -509,11 +518,17 @@ body {
   color: var(--navy);
   letter-spacing: -0.01em;
   margin-bottom: 4px;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
 }
 
 .section-subtitle {
   font-size: 16px;
   color: var(--text-secondary);
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
 }
 
 .view-all-btn {
@@ -541,6 +556,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 32px;
 }
 
 /* Why Sidebar (bên phải rooms) */
