@@ -492,7 +492,8 @@ body {
   max-width: 1600px;
   margin-left: 0;
   margin-right: auto;
-  padding: 0 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 /* Section Header */
