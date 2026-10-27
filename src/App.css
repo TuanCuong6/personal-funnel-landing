@@ -836,10 +836,9 @@ body {
 
 /* ========== FOOTER ========== */
 .footer {
-  padding: 48px 0 32px;
+  padding: 16px 0;
   background: var(--navy);
   color: white;
-  text-align: center;
 }
 
 .footer-container {
@@ -848,49 +847,20 @@ body {
   padding: 0 32px;
 }
 
-.footer-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.footer-logo-text {
-  font-size: 20px;
-  font-weight: 700;
-  color: white;
-}
-
-.footer-slogan {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 32px;
-}
-
-.footer-nav {
+.footer-simple {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.footer-link {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
+.footer-icon {
+  flex-shrink: 0;
+}
+
+.footer-text {
   font-size: 14px;
-  transition: var(--transition);
-}
-
-.footer-link:hover {
-  color: white;
-}
-
-.footer-copyright {
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ========== RESPONSIVE ========== */
