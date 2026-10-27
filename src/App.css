@@ -4,17 +4,10 @@
    ========================================= */
 
 /* ========== RESET & BASE ========== */
-*, *::before, *::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 :root {
@@ -87,7 +80,8 @@ body {
 
 .header-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 0;
+  margin-right: auto;
   padding: 0 32px;
   height: 76px;
   display: flex;
@@ -235,7 +229,8 @@ body {
 
 .hero-container {
   max-width: 1600px;
-  margin: 0 auto;
+  margin-left: 0;
+  margin-right: auto;
   padding: 0 32px;
   position: relative;
   z-index: 1;
@@ -876,7 +871,8 @@ body {
 
 .footer-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 0;
+  margin-right: auto;
   padding: 0 32px;
 }
 
