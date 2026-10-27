@@ -203,9 +203,9 @@ body {
 /* ========== HERO SECTION ========== */
 .hero {
   position: relative;
-  padding-top: 110px;
-  padding-bottom: 45px;
-  min-height: 440px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  min-height: 410px;
   overflow: hidden;
 }
 
