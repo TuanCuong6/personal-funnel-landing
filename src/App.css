@@ -486,12 +486,13 @@ body {
 .rooms-section {
   padding: 64px 0;
   background: var(--bg-white);
+  display: flex;
+  justify-content: flex-start;
 }
 
 .rooms-container {
-  max-width: 1600px;
-  margin-left: 0;
-  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
   padding-left: 32px;
   padding-right: 32px;
 }
