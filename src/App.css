@@ -628,6 +628,7 @@ body {
 /* Property Content */
 .property-content {
   padding: 20px;
+  text-align: left;
 }
 
 .property-title {
@@ -640,6 +641,7 @@ body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: left;
 }
 
 .property-location {
@@ -649,6 +651,7 @@ body {
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 12px;
+  text-align: left;
 }
 
 .property-price {
@@ -656,6 +659,7 @@ body {
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 16px;
+  text-align: left;
 }
 
 /* Property Meta */
@@ -665,6 +669,7 @@ body {
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
+  text-align: left;
 }
 
 .property-meta-item {
