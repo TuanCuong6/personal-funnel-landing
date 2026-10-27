@@ -2,7 +2,6 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import RoomList from './components/RoomList';
-import StickyZalo from './components/StickyZalo';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
       <Header />
       <Hero zaloLink={defaultZaloLink} />
       <RoomList />
-      <StickyZalo zaloLink={defaultZaloLink} />
       <Footer />
     </div>
   );

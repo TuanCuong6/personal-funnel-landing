@@ -834,44 +834,6 @@ body {
   background: var(--primary-hover);
 }
 
-/* ========== STICKY ZALO ========== */
-.sticky-zalo {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999;
-}
-
-.zalo-btn {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0180C7, #0092D2);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(1, 128, 199, 0.4);
-  transition: var(--transition);
-  animation: zaloFloat 3s ease-in-out infinite;
-}
-
-@keyframes zaloFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.zalo-btn:hover {
-  transform: scale(1.1) translateY(0) !important;
-  box-shadow: 0 6px 20px rgba(1, 128, 199, 0.5);
-}
-
-.zalo-icon {
-  font-size: 28px;
-  color: white;
-}
-
 /* ========== FOOTER ========== */
 .footer {
   padding: 48px 0 32px;
@@ -1051,16 +1013,6 @@ body {
 
   .bottom-cta-actions {
     gap: 16px;
-  }
-
-  .sticky-zalo {
-    bottom: 16px;
-    right: 16px;
-  }
-
-  .zalo-btn {
-    width: 56px;
-    height: 56px;
   }
 
   .footer-container {
