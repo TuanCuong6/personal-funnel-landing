@@ -1,3 +1,5 @@
+import zaloIcon from '../assets/images/zalo.png';
+
 function Footer() {
   const zaloLink = import.meta.env.VITE_DEFAULT_ZALO || 'https://zalo.me/0373971926';
 
@@ -56,9 +58,7 @@ function Footer() {
           marginBottom: '32px',
           transition: 'all 0.25s ease'
         }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-          </svg>
+          <img src={zaloIcon} alt="Zalo" width="20" height="20" />
           <span>Nhắn Zalo để được tư vấn</span>
         </button>
 

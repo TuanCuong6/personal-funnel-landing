@@ -1,4 +1,5 @@
 import bannerImage from '../assets/images/HomeBanner.png';
+import zaloIcon from '../assets/images/zalo.png';
 
 function Hero({ zaloLink }) {
   const handleZaloClick = () => {
@@ -80,9 +81,7 @@ function Hero({ zaloLink }) {
 
           {/* CTA Button */}
           <button className="hero-cta-button" onClick={handleZaloClick}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-            </svg>
+            <img src={zaloIcon} alt="Zalo" width="20" height="20" />
             <span>Nhắn Zalo ngay</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>

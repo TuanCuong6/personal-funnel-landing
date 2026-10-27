@@ -1,3 +1,5 @@
+import zaloIcon from '../assets/images/zalo.png';
+
 function RoomCard({ room, onContactClick }) {
   const formatPrice = (price) => {
     return new Intl.NumberFormat('vi-VN', {
@@ -92,9 +94,7 @@ function RoomCard({ room, onContactClick }) {
 
         {/* CTA Button */}
         <button className="property-cta" onClick={handleContactClick}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-          </svg>
+          <img src={zaloIcon} alt="Zalo" width="18" height="18" />
           <span>Liên hệ Zalo</span>
         </button>
       </div>

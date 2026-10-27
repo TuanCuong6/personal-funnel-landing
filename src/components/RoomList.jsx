@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { roomsAPI } from '../services/api';
 import RoomCard from './RoomCard';
+import zaloIcon from '../assets/images/zalo.png';
 
 function RoomList() {
   const [rooms, setRooms] = useState([]);
@@ -177,9 +178,7 @@ function RoomList() {
               <div className="why-footer">
                 <div className="why-footer-content">
                   <div className="why-footer-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-                    </svg>
+                    <img src={zaloIcon} alt="Zalo" width="24" height="24" />
                   </div>
                   <div>
                     <div className="why-footer-title">Đừng ngần ngại!</div>
@@ -194,9 +193,7 @@ function RoomList() {
                 </div>
 
                 <button className="why-cta" onClick={handleContactZalo}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-                  </svg>
+                  <img src={zaloIcon} alt="Zalo" width="20" height="20" />
                   <span>Nhắn Zalo ngay</span>
                 </button>
               </div>
@@ -245,9 +242,7 @@ function RoomList() {
             </div>
 
             <button className="bottom-cta-btn" onClick={handleContactZalo}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l5.71-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
+              <img src={zaloIcon} alt="Zalo" width="20" height="20" />
               <span>Nhắn Zalo ngay</span>
             </button>
           </div>
