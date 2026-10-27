@@ -228,6 +228,7 @@ body {
   padding: 0 32px;
   position: relative;
   z-index: 1;
+  text-align: left;
 }
 
 /* Hero Content */
