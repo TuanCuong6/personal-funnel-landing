@@ -59,6 +59,14 @@ body {
   outline: none;
 }
 
+#root {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 .app {
   min-height: 100vh;
   position: relative;
