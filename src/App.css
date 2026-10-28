@@ -57,14 +57,8 @@ body {
   padding: 0;
   border: none;
   outline: none;
-}
-
-#root {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-shadow: none;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 .app {
@@ -75,6 +69,13 @@ body {
   border: none;
   outline: none;
   box-shadow: none;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+*, *::before, *::after {
+  border-left: none !important;
+  border-right: none !important;
 }
 
 /* ========== HEADER ========== */
@@ -222,8 +223,12 @@ body {
   position: relative;
   padding-top: 100px;
   padding-bottom: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
   min-height: 410px;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Hero Background */
@@ -240,8 +245,9 @@ body {
 }
 
 .hero-container {
-  max-width: 1600px;
-  margin: 0 auto;
+  max-width: none;
+  width: 100%;
+  margin: 0;
   padding: 0 32px;
   position: relative;
   z-index: 1;
