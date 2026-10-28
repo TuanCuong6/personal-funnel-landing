@@ -19,9 +19,8 @@ function Header() {
       <div className="header-container">
         {/* Logo */}
         <a href="/" className="logo">
-          <svg className="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="none">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="#0878F9" stroke="#0878F9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M9 22V12h6v10" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg className="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#0878F9' }}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
           </svg>
           <div className="logo-text">
             <div className="logo-main">Thuê Phòng Bắc Từ Liêm</div>
