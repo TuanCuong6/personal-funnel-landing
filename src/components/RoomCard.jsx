@@ -38,8 +38,8 @@ function RoomCard({ room, onContactClick }) {
         />
         
         {/* Type Badge */}
-        {room.roomType && (
-          <div className="property-badge">{room.roomType}</div>
+        {room.roomTypeName && (
+          <div className="property-badge">{room.roomTypeName}</div>
         )}
         
         {/* Favorite Button */}
