@@ -69,12 +69,12 @@ function Hero({ zaloLink }) {
             <div className="hero-benefit-item">
               <div className="benefit-icon-circle">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                 </svg>
               </div>
               <div className="benefit-label">
-                <div className="benefit-label-title">Chỉ kết nối qua</div>
-                <div className="benefit-label-subtitle">Zalo cá nhân</div>
+                <div className="benefit-label-title">Phòng mới</div>
+                <div className="benefit-label-subtitle">Cập nhật 24/7</div>
               </div>
             </div>
           </div>

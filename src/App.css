@@ -904,17 +904,53 @@ body {
     display: block;
   }
 
+  .hero {
+    min-height: auto;
+  }
+
   .hero-title {
-    font-size: 42px;
+    font-size: 38px;
+  }
+
+  .hero-benefits-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 100%;
   }
 
   .rooms-section {
-    padding: 64px 24px;
+    padding: 48px 24px;
+  }
+
+  .section-header {
+    margin-right: 0;
   }
 
   .rooms-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding-right: 0;
+  }
+
+  .pre-footer {
+    padding: 24px 24px;
+  }
+
+  .pre-footer-container {
+    flex-wrap: wrap;
+  }
+
+  .pre-footer-title {
+    font-size: 18px;
+  }
+
+  .pre-footer-subtitle {
+    font-size: 13px;
+  }
+
+  .pre-footer-actions {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 }
 
@@ -942,8 +978,9 @@ body {
   }
 
   .hero {
-    padding-top: 100px;
-    padding-bottom: 48px;
+    padding-top: 80px;
+    padding-bottom: 32px;
+    min-height: auto;
   }
 
   .hero-container {
@@ -951,21 +988,24 @@ body {
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 12px;
   }
 
   .hero-description {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 18px;
   }
 
   .hero-benefits-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
   .benefit-icon-circle {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
   }
 
   .benefit-icon-circle svg {
@@ -973,17 +1013,100 @@ body {
     height: 18px;
   }
 
+  .benefit-label-title,
+  .benefit-label-subtitle {
+    font-size: 11px;
+  }
+
+  .hero-cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
   .rooms-section {
-    padding: 48px 16px;
+    padding: 32px 16px;
+  }
+
+  .section-header {
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+    padding-top: 14px;
+  }
+
+  .section-title::before {
+    width: 36px;
+    height: 3px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .view-all-btn {
+    padding: 10px 16px;
+    font-size: 13px;
   }
 
   .rooms-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+    padding-right: 0;
   }
 
-  .section-title {
-    font-size: 26px;
+  .pre-footer {
+    padding: 20px 16px;
+  }
+
+  .pre-footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .pre-footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .pre-footer-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .pre-footer-text {
+    text-align: left;
+  }
+
+  .pre-footer-title {
+    font-size: 16px;
+  }
+
+  .pre-footer-subtitle {
+    font-size: 12px;
+  }
+
+  .pre-footer-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .pre-footer-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .pre-footer-feature {
+    font-size: 12px;
   }
 
   .bottom-cta-container {
@@ -1006,18 +1129,35 @@ body {
   .footer-container {
     padding: 0 16px;
   }
+
+  .footer-text {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 30px;
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 22px;
   }
 
   .why-card {
     padding: 24px;
   }
 
-  .property-image-container {
-    height: 200px;
+  .pre-footer-title {
+    font-size: 15px;
+  }
+
+  .pre-footer-subtitle {
+    font-size: 11px;
   }
 }
