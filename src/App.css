@@ -507,7 +507,7 @@ body {
 
 /* ========== ROOMS SECTION ========== */
 .rooms-section {
-  padding-top: 64px;
+  padding-top: 40px;
   padding-bottom: 64px;
   padding-left: 0;
   padding-right: 0;
@@ -544,6 +544,19 @@ body {
   margin-left: 0;
   padding-left: 0;
   text-align: left;
+  position: relative;
+  padding-top: 16px;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), rgba(8, 120, 249, 0.6));
+  border-radius: 3px;
 }
 
 .section-subtitle {
@@ -588,158 +601,6 @@ body {
 .why-sidebar {
   position: sticky;
   top: 100px;
-}
-
-/* ========== PROPERTY CARD ========== */
-.property-card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.property-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--border-hover);
-}
-
-/* Image Container */
-.property-image-container {
-  position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  background: var(--bg-light);
-}
-
-.property-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.property-card:hover .property-image {
-  transform: scale(1.05);
-}
-
-/* Type Badge */
-.property-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, #0180C7, #0092D2);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Favorite Button */
-.property-favorite {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.95);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: var(--transition);
-  color: var(--text-secondary);
-}
-
-.property-favorite:hover {
-  background: white;
-  color: #EF4444;
-  transform: scale(1.1);
-}
-
-/* Property Content */
-.property-content {
-  padding: 20px;
-  text-align: left;
-}
-
-.property-title {
-  font-size: 18px;
-  font-weight: 650;
-  color: var(--text-primary);
-  line-height: 1.4;
-  margin-bottom: 8px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-align: left;
-}
-
-.property-location {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-  text-align: left;
-}
-
-.property-price {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-/* Property Meta */
-.property-meta {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-}
-
-.property-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-  color: var(--text-secondary);
-}
-
-/* Property CTA */
-.property-cta {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, #0180C7, #0092D2);
-  border: none;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.property-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(1, 128, 199, 0.3);
 }
 
 /* ========== BOTTOM CTA SECTION ========== */
@@ -882,7 +743,7 @@ body {
 /* ========== PRE-FOOTER CTA ========== */
 .pre-footer {
   position: relative;
-  padding: 32px 32px;
+  padding: 24px 32px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

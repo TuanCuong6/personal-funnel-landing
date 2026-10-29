@@ -1,3 +1,4 @@
+import './RoomCard.css';
 import zaloIcon from '../assets/images/zalo.png';
 
 function RoomCard({ room, onContactClick }) {
