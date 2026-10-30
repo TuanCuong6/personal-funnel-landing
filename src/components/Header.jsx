@@ -1,4 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { HomeIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import zaloIcon from '../assets/images/zalo.png';
 
 function Header() {
@@ -31,9 +32,7 @@ function Header() {
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          <svg className="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#0878F9' }}>
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-          </svg>
+          <HomeIcon className="logo-icon" style={{ width: '40px', height: '40px', color: '#0878F9' }} />
           <div className="logo-text">
             <div className="logo-main">Thuê Phòng Bắc Từ Liêm</div>
             <div className="logo-sub">Phòng đẹp – Cuộc sống tốt hơn!</div>
@@ -55,11 +54,7 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button className="mobile-menu-btn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+          <Bars3Icon style={{ width: '24px', height: '24px' }} />
         </button>
       </div>
     </header>

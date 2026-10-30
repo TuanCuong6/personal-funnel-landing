@@ -1,3 +1,4 @@
+import { UserCircleIcon, ClockIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import preFooterBg from '../assets/images/Pre-Footer.png';
 import zaloIcon from '../assets/images/zalo.png';
 
@@ -15,10 +16,7 @@ function PreFooter() {
         <div className="pre-footer-content">
           {/* Avatar Icon */}
           <div className="pre-footer-avatar">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
+            <UserCircleIcon style={{ width: '48px', height: '48px' }} />
           </div>
 
           {/* Text Content */}
@@ -38,18 +36,13 @@ function PreFooter() {
 
           {/* Feature 2 */}
           <div className="pre-footer-feature">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
+            <ClockIcon style={{ width: '20px', height: '20px' }} />
             <span>Hỗ trợ 24/7</span>
           </div>
 
           {/* Feature 3 */}
           <div className="pre-footer-feature">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
+            <ShieldCheckIcon style={{ width: '20px', height: '20px' }} />
             <span>Uy tín – Tận tâm</span>
           </div>
         </div>

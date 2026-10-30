@@ -4,6 +4,7 @@ import RoomCard from '../components/RoomCard';
 import { roomsAPI, districtsAPI, roomTypesAPI } from '../services/api';
 import bannerImage from '../assets/images/Banner2.png';
 import zaloIcon from '../assets/images/zalo.png';
+import { ShieldCheckIcon, HandThumbUpIcon, BoltIcon } from '@heroicons/react/24/solid';
 
 function RoomList() {
   const [rooms, setRooms] = useState([]);
@@ -182,9 +183,7 @@ function RoomList() {
         <div className="bottom-benefits-container">
           <div className="bottom-benefit-item">
             <div className="bottom-benefit-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-              </svg>
+              <ShieldCheckIcon className="benefit-hero-icon" />
             </div>
             <div className="bottom-benefit-text">
               <div className="bottom-benefit-title">Thông tin minh bạch</div>
@@ -194,9 +193,7 @@ function RoomList() {
 
           <div className="bottom-benefit-item">
             <div className="bottom-benefit-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
+              <HandThumbUpIcon className="benefit-hero-icon" />
             </div>
             <div className="bottom-benefit-text">
               <div className="bottom-benefit-title">Giá cả hợp lý</div>
@@ -206,21 +203,15 @@ function RoomList() {
 
           <div className="bottom-benefit-item">
             <div className="bottom-benefit-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
-              </svg>
+              <BoltIcon className="benefit-hero-icon" />
             </div>
             <div className="bottom-benefit-text">
-              <div className="bottom-benefit-title">Hỗ trợ 24/7</div>
-              <div className="bottom-benefit-desc">Luôn sẵn sàng tư vấn và hỗ trợ</div>
+              <div className="bottom-benefit-title">Xem phòng nhanh</div>
+              <div className="bottom-benefit-desc">Liên hệ sắp xếp lịch phù hợp</div>
             </div>
           </div>
 
           <div className="bottom-benefit-cta">
-            <div className="bottom-benefit-cta-content">
-              <div className="bottom-benefit-cta-title">Bạn cần tìm phòng?</div>
-              <div className="bottom-benefit-cta-subtitle">Nhắn Zalo để được tư vấn</div>
-            </div>
             <button className="bottom-benefit-cta-btn" onClick={handleZaloClick}>
               <img src={zaloIcon} alt="Zalo" width="18" height="18" />
               <span>Liên hệ Zalo</span>
