@@ -24,4 +24,20 @@ export const roomsAPI = {
   },
 };
 
+export const districtsAPI = {
+  // Lấy tất cả quận/huyện
+  getAllDistricts: async () => {
+    const response = await api.get('/districts');
+    return response.data;
+  },
+};
+
+export const roomTypesAPI = {
+  // Lấy tất cả loại phòng
+  getAllRoomTypes: async () => {
+    const response = await api.get('/roomtypes');
+    return response.data;
+  },
+};
+
 export default api;

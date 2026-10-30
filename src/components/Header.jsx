@@ -1,6 +1,9 @@
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import zaloIcon from '../assets/images/zalo.png';
 
 function Header() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const zaloLink = import.meta.env.VITE_DEFAULT_ZALO || 'https://zalo.me/0373971926';
 
   const handleZaloClick = () => {
@@ -14,11 +17,20 @@ function Header() {
     }
   };
 
+  const handleAboutClick = () => {
+    if (location.pathname === '/') {
+      scrollToSection('footer');
+    } else {
+      navigate('/');
+      setTimeout(() => scrollToSection('footer'), 100);
+    }
+  };
+
   return (
     <header className="header">
       <div className="header-container">
         {/* Logo */}
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <svg className="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#0878F9' }}>
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
           </svg>
@@ -26,14 +38,13 @@ function Header() {
             <div className="logo-main">Thuê Phòng Bắc Từ Liêm</div>
             <div className="logo-sub">Phòng đẹp – Cuộc sống tốt hơn!</div>
           </div>
-        </a>
+        </Link>
 
         {/* Navigation Menu */}
         <nav className="nav-menu">
-          <a href="/" className="nav-link active">Trang chủ</a>
-          <button onClick={() => scrollToSection('rooms-section')} className="nav-link">Danh sách phòng</button>
-          <button onClick={() => scrollToSection('footer')} className="nav-link">Về tôi</button>
-          <button onClick={() => scrollToSection('rooms-section')} className="nav-link">Khu vực</button>
+          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Trang chủ</Link>
+          <Link to="/rooms" className={`nav-link ${location.pathname === '/rooms' ? 'active' : ''}`}>Danh sách phòng</Link>
+          <button onClick={handleAboutClick} className="nav-link">Về tôi</button>
         </nav>
 
         {/* CTA Button */}

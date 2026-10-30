@@ -720,10 +720,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 32px;
+  margin: 0 auto;
+  padding: 0;
   align-items: stretch;
+  width: 100%;
 }
 
 /* Why Sidebar (bên phải rooms) */

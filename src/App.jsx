@@ -1,22 +1,22 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import RoomList from './components/RoomList';
-import PreFooter from './components/PreFooter';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import RoomListPage from './pages/RoomList';
 
 function App() {
-  // Default Zalo link - có thể lấy từ config hoặc API
-  const defaultZaloLink = 'https://zalo.me/0373971926';
-
   return (
-    <div className="app">
-      <Header />
-      <Hero zaloLink={defaultZaloLink} />
-      <RoomList />
-      <PreFooter />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/rooms" element={<RoomListPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

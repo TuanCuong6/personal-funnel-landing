@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { roomsAPI } from '../services/api';
 import RoomCard from './RoomCard';
 
@@ -6,6 +7,7 @@ function RoomList() {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchRooms();
@@ -26,10 +28,7 @@ function RoomList() {
   };
 
   const handleViewAll = () => {
-    const roomsSection = document.querySelector('.rooms-section');
-    if (roomsSection) {
-      roomsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/rooms');
   };
 
   if (loading) {
