@@ -1,7 +1,9 @@
 import './RoomCard.css';
 import zaloIcon from '../assets/images/zalo.png';
+import { useState } from 'react';
 
 function RoomCard({ room, onContactClick }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const formatPrice = (price) => {
     return new Intl.NumberFormat('vi-VN', {
       style: 'currency',
@@ -31,9 +33,12 @@ function RoomCard({ room, onContactClick }) {
         <img 
           src={roomImage}
           alt={room.title}
-          className="property-image"
+          className={`property-image ${imageLoaded ? 'loaded' : ''}`}
+          loading="lazy"
+          onLoad={() => setImageLoaded(true)}
           onError={(e) => {
             e.target.src = 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80';
+            setImageLoaded(true);
           }}
         />
         
