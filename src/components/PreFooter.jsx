@@ -35,13 +35,13 @@ function PreFooter() {
           </button>
 
           {/* Feature 2 */}
-          <div className="pre-footer-feature">
+          <div className="pre-footer-feature hide-mobile">
             <ClockIcon style={{ width: '20px', height: '20px' }} />
             <span>Hỗ trợ 24/7</span>
           </div>
 
           {/* Feature 3 */}
-          <div className="pre-footer-feature">
+          <div className="pre-footer-feature hide-mobile">
             <ShieldCheckIcon style={{ width: '20px', height: '20px' }} />
             <span>Uy tín – Tận tâm</span>
           </div>
