@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
+import Select from 'react-select';
 import './RoomList.css';
 import RoomCard from '../components/RoomCard';
-import CustomSelect from '../components/CustomSelect';
 import { roomsAPI, districtsAPI, roomTypesAPI } from '../services/api';
 import bannerImage from '../assets/images/Banner2.png';
 import zaloIcon from '../assets/images/zalo.png';
@@ -46,7 +46,7 @@ function RoomList() {
     }
   };
 
-  // Format data for CustomSelect
+  // Format data for react-select
   const districtOptions = [
     { value: '', label: 'Khu vực' },
     ...districts.map(d => ({ value: d.id, label: d.name }))
@@ -65,6 +65,79 @@ function RoomList() {
     { value: '5-10', label: '5-10 triệu' },
     { value: '10+', label: 'Trên 10 triệu' }
   ];
+
+  // Custom styles for react-select
+  const selectStyles = {
+    control: (base, state) => ({
+      ...base,
+      border: 'none',
+      boxShadow: 'none',
+      background: 'transparent',
+      minHeight: 'auto',
+      cursor: 'pointer',
+      '&:hover': {
+        border: 'none'
+      }
+    }),
+    valueContainer: (base) => ({
+      ...base,
+      padding: 0
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: '#0878F9',
+      fontWeight: 500,
+      fontSize: '14px'
+    }),
+    placeholder: (base) => ({
+      ...base,
+      color: '#0878F9',
+      fontWeight: 500,
+      fontSize: '14px',
+      margin: 0
+    }),
+    input: (base) => ({
+      ...base,
+      margin: 0,
+      padding: 0
+    }),
+    indicatorSeparator: () => ({
+      display: 'none'
+    }),
+    dropdownIndicator: (base) => ({
+      ...base,
+      color: '#0878F9',
+      padding: 0,
+      paddingLeft: '8px',
+      '&:hover': {
+        color: '#0878F9'
+      }
+    }),
+    menu: (base) => ({
+      ...base,
+      borderRadius: '12px',
+      marginTop: '8px',
+      boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
+      border: '1px solid #E5E7EB',
+      overflow: 'hidden'
+    }),
+    menuList: (base) => ({
+      ...base,
+      padding: 0
+    }),
+    option: (base, state) => ({
+      ...base,
+      backgroundColor: state.isSelected ? '#EBF5FF' : state.isFocused ? '#F5F5F5' : 'white',
+      color: state.isSelected ? '#0878F9' : '#102F5E',
+      fontWeight: state.isSelected ? 500 : 400,
+      cursor: 'pointer',
+      padding: '12px 16px',
+      fontSize: '14px',
+      '&:active': {
+        backgroundColor: '#EBF5FF'
+      }
+    })
+  };
 
   const handleSearch = () => {
     console.log('Search:', { selectedDistrict, selectedRoomType, selectedPriceRange });
@@ -126,11 +199,13 @@ function RoomList() {
               </svg>
             </div>
             <div className="filter-item">
-              <CustomSelect
-                value={selectedDistrict}
-                onChange={setSelectedDistrict}
+              <Select
+                value={districtOptions.find(opt => opt.value === selectedDistrict)}
+                onChange={(option) => setSelectedDistrict(option?.value || '')}
                 options={districtOptions}
                 placeholder="Khu vực"
+                styles={selectStyles}
+                isSearchable={false}
               />
             </div>
           </div>
@@ -143,11 +218,13 @@ function RoomList() {
               </svg>
             </div>
             <div className="filter-item">
-              <CustomSelect
-                value={selectedRoomType}
-                onChange={setSelectedRoomType}
+              <Select
+                value={roomTypeOptions.find(opt => opt.value === selectedRoomType)}
+                onChange={(option) => setSelectedRoomType(option?.value || '')}
                 options={roomTypeOptions}
                 placeholder="Loại phòng"
+                styles={selectStyles}
+                isSearchable={false}
               />
             </div>
           </div>
@@ -160,11 +237,13 @@ function RoomList() {
               </svg>
             </div>
             <div className="filter-item">
-              <CustomSelect
-                value={selectedPriceRange}
-                onChange={setSelectedPriceRange}
+              <Select
+                value={priceRangeOptions.find(opt => opt.value === selectedPriceRange)}
+                onChange={(option) => setSelectedPriceRange(option?.value || '')}
                 options={priceRangeOptions}
                 placeholder="Mức giá"
+                styles={selectStyles}
+                isSearchable={false}
               />
             </div>
           </div>

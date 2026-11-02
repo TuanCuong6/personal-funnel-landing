@@ -15,14 +15,27 @@
   flex: 1;
   font-size: 14px;
   font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .custom-select-trigger .placeholder {
-  color: var(--primary);
+  color: #0878F9 !important;
+  opacity: 1 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
 }
 
 .custom-select-trigger .selected {
-  color: var(--primary);
+  color: #0878F9 !important;
+  opacity: 1 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
 }
 
 .chevron-icon {
