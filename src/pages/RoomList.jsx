@@ -4,8 +4,6 @@ import './RoomList.css';
 import RoomCard from '../components/RoomCard';
 import { roomsAPI, districtsAPI, roomTypesAPI } from '../services/api';
 import bannerImage from '../assets/images/Banner2.png';
-import zaloIcon from '../assets/images/zalo.png';
-import { ShieldCheckIcon, HandThumbUpIcon, BoltIcon } from '@heroicons/react/24/solid';
 
 function RoomList() {
   const [rooms, setRooms] = useState([]);
@@ -18,8 +16,6 @@ function RoomList() {
   const [selectedDistrict, setSelectedDistrict] = useState('');
   const [selectedRoomType, setSelectedRoomType] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('');
-
-  const zaloLink = import.meta.env.VITE_DEFAULT_ZALO || 'https://zalo.me/0373971926';
 
   useEffect(() => {
     fetchData();
@@ -144,10 +140,6 @@ function RoomList() {
     // TODO: Implement filter logic
   };
 
-  const handleZaloClick = () => {
-    window.open(zaloLink, '_blank');
-  };
-
   if (error) {
     return (
       <div className="room-list-page">
@@ -270,48 +262,6 @@ function RoomList() {
               ))}
             </div>
           )}
-        </div>
-      </section>
-
-      {/* Bottom Benefits Section */}
-      <section className="bottom-benefits">
-        <div className="bottom-benefits-container">
-          <div className="bottom-benefit-item">
-            <div className="bottom-benefit-icon">
-              <ShieldCheckIcon className="benefit-hero-icon" />
-            </div>
-            <div className="bottom-benefit-text">
-              <div className="bottom-benefit-title">Thông tin minh bạch</div>
-              <div className="bottom-benefit-desc">Hiện giá thật, không lừa đảo</div>
-            </div>
-          </div>
-
-          <div className="bottom-benefit-item">
-            <div className="bottom-benefit-icon">
-              <HandThumbUpIcon className="benefit-hero-icon" />
-            </div>
-            <div className="bottom-benefit-text">
-              <div className="bottom-benefit-title">Giá cả hợp lý</div>
-              <div className="bottom-benefit-desc">Không phí môi giới, phí ẩn phí ấn</div>
-            </div>
-          </div>
-
-          <div className="bottom-benefit-item">
-            <div className="bottom-benefit-icon">
-              <BoltIcon className="benefit-hero-icon" />
-            </div>
-            <div className="bottom-benefit-text">
-              <div className="bottom-benefit-title">Xem phòng nhanh</div>
-              <div className="bottom-benefit-desc">Liên hệ sắp xếp lịch phù hợp</div>
-            </div>
-          </div>
-
-          <div className="bottom-benefit-cta">
-            <button className="bottom-benefit-cta-btn" onClick={handleZaloClick}>
-              <img src={zaloIcon} alt="Zalo" width="18" height="18" />
-              <span>Liên hệ Zalo</span>
-            </button>
-          </div>
         </div>
       </section>
     </div>
