@@ -1,4 +1,4 @@
-import { UserCircleIcon, ClockIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+import { UserCircleIcon, HeartIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import preFooterBg from '../assets/images/Pre-Footer.png';
 import zaloIcon from '../assets/images/zalo.png';
 
@@ -22,7 +22,7 @@ function PreFooter() {
           {/* Text Content */}
           <div className="pre-footer-text">
             <h3 className="pre-footer-title">Bạn cần tìm phòng phù hợp?</h3>
-            <p className="pre-footer-subtitle">Mình luôn sẵn sàng tư vấn giúp bạn tìm được phòng ưng ý nhất!</p>
+            <p className="pre-footer-subtitle">Mình luôn sẵn sàng giúp bạn tìm được phòng ưng ý nhất!</p>
           </div>
         </div>
 
@@ -36,8 +36,8 @@ function PreFooter() {
 
           {/* Feature 2 */}
           <div className="pre-footer-feature hide-mobile">
-            <ClockIcon style={{ width: '20px', height: '20px' }} />
-            <span>Hỗ trợ 24/7</span>
+            <HeartIcon style={{ width: '20px', height: '20px' }} />
+            <span>Hỗ trợ tận tình</span>
           </div>
 
           {/* Feature 3 */}

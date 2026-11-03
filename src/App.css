@@ -245,6 +245,27 @@ body {
   color: var(--primary);
 }
 
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* ========== HERO SECTION ========== */
 .hero {
   position: relative;
@@ -596,6 +617,7 @@ body {
   margin: 0;
   background: var(--bg-white);
   animation: fadeIn 0.8s ease-out;
+  min-height: 600px;
 }
 
 .rooms-container {
@@ -1014,7 +1036,7 @@ body {
 /* ========== FOOTER ========== */
 .footer {
   padding: 16px 0;
-  background: var(--navy);
+  background: #1a3d6b;
   color: white;
 }
 
@@ -1170,7 +1192,7 @@ body {
   .hero {
     padding-top: 70px;
     padding-bottom: 20px;
-    min-height: 320px;
+    min-height: 260px;
   }
 
   .hero-background {
@@ -1200,42 +1222,7 @@ body {
   }
 
   .hero-benefits-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    margin-bottom: 14px;
-  }
-
-  .hero-benefit-item {
-    flex-direction: row;
-    text-align: left;
-    gap: 6px;
-    align-items: center;
-  }
-
-  .benefit-icon-circle {
-    width: 30px;
-    height: 30px;
-  }
-
-  .benefit-icon-circle svg {
-    width: 15px;
-    height: 15px;
-  }
-
-  .benefit-label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .benefit-label-title {
-    font-size: 9px;
-    line-height: 1.2;
-  }
-
-  .benefit-label-subtitle {
-    font-size: 9px;
-    line-height: 1.2;
+    display: none;
   }
 
   .hero-cta-button {

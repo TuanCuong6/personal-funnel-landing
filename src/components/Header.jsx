@@ -39,40 +39,47 @@ function Header() {
   };
 
   return (
-    <header className="header">
-      <div className="header-container">
-        {/* Logo */}
-        <Link to="/" className="logo" onClick={handleNavClick}>
-          <HomeIcon className="logo-icon" style={{ width: '40px', height: '40px', color: '#0878F9' }} />
-          <div className="logo-text">
-            <div className="logo-main">Thuê Phòng Bắc Từ Liêm</div>
-            <div className="logo-sub">Phòng đẹp – Cuộc sống tốt hơn!</div>
-          </div>
-        </Link>
+    <>
+      <header className="header">
+        <div className="header-container">
+          {/* Logo */}
+          <Link to="/" className="logo" onClick={handleNavClick}>
+            <HomeIcon className="logo-icon" style={{ width: '40px', height: '40px', color: '#0878F9' }} />
+            <div className="logo-text">
+              <div className="logo-main">Thuê Phòng Bắc Từ Liêm</div>
+              <div className="logo-sub">Phòng đẹp – Cuộc sống tốt hơn!</div>
+            </div>
+          </Link>
 
-        {/* Navigation Menu */}
-        <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={handleNavClick}>Trang chủ</Link>
-          <Link to="/rooms" className={`nav-link ${location.pathname === '/rooms' ? 'active' : ''}`} onClick={handleNavClick}>Danh sách phòng</Link>
-          <button onClick={handleAboutClick} className="nav-link">Về tôi</button>
-        </nav>
+          {/* Navigation Menu */}
+          <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+            <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={handleNavClick}>Trang chủ</Link>
+            <Link to="/rooms" className={`nav-link ${location.pathname === '/rooms' ? 'active' : ''}`} onClick={handleNavClick}>Danh sách phòng</Link>
+            <button onClick={handleAboutClick} className="nav-link">Về tôi</button>
+          </nav>
 
-        {/* CTA Button */}
-        <button className="header-cta" onClick={handleZaloClick}>
-          <img src={zaloIcon} alt="Zalo" width="20" height="20" />
-          <span>Liên hệ Zalo</span>
-        </button>
+          {/* CTA Button */}
+          <button className="header-cta" onClick={handleZaloClick}>
+            <img src={zaloIcon} alt="Zalo" width="20" height="20" />
+            <span>Liên hệ Zalo</span>
+          </button>
 
-        {/* Mobile Menu Button */}
-        <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? (
-            <XMarkIcon style={{ width: '24px', height: '24px' }} />
-          ) : (
-            <Bars3Icon style={{ width: '24px', height: '24px' }} />
-          )}
-        </button>
-      </div>
-    </header>
+          {/* Mobile Menu Button */}
+          <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? (
+              <XMarkIcon style={{ width: '24px', height: '24px' }} />
+            ) : (
+              <Bars3Icon style={{ width: '24px', height: '24px' }} />
+            )}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={toggleMobileMenu}></div>
+      )}
+    </>
   );
 }
 

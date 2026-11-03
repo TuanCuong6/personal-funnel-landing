@@ -173,6 +173,7 @@
 .room-list-rooms {
   padding: 40px 0 64px;
   animation: fadeIn 0.8s ease-out;
+  min-height: 500px;
 }
 
 .room-list-rooms-container {
