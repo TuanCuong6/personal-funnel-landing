@@ -118,14 +118,15 @@
   min-width: 0;
   padding: 12px 16px;
   background: white;
-  border: 1px solid #E5E7EB;
+  border: 1.5px solid rgba(8, 120, 249, 0.15);
   border-radius: 12px;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .filter-item:hover {
-  border-color: var(--primary);
-  box-shadow: 0 2px 8px rgba(8, 120, 249, 0.15);
+  border-color: rgba(8, 120, 249, 0.4);
+  box-shadow: 0 2px 8px rgba(8, 120, 249, 0.12);
 }
 
 .filter-search-btn {
@@ -231,17 +232,12 @@
   }
 
   .filter-bar-container {
-    flex-wrap: wrap;
     gap: 16px;
   }
 
-  .filter-item-wrapper {
-    flex: 1 1 calc(50% - 8px);
-    min-width: 200px;
-  }
-
+  /* Ẩn nút tìm kiếm ở tablet */
   .filter-search-btn {
-    flex: 1 1 100%;
+    display: none;
   }
 }
 
@@ -250,7 +246,7 @@
   /* Hero Banner */
   .room-list-hero {
     padding-top: 78px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     min-height: 180px;
   }
 
@@ -271,58 +267,51 @@
     font-size: 13px;
   }
 
-  /* Filter Bar */
+  /* Filter Bar - Tách rời khỏi banner, đặt xuống dưới */
   .filter-bar {
     position: static;
-    padding: 0 16px;
-    margin-top: 0;
-    margin-bottom: 16px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 24px;
   }
 
   .filter-bar-container {
-    padding: 16px;
-    flex-direction: column;
-    gap: 12px;
-    border-radius: 12px;
-    margin-top: 0;
+    padding: 0 16px;
+    gap: 8px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Ẩn icon ở mobile */
+  .filter-icon-outside {
+    display: none;
   }
 
   .filter-item-wrapper {
-    width: 100%;
-    gap: 8px;
-  }
-
-  .filter-icon-outside {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 0;
-  }
-
-  .filter-icon-outside svg {
-    width: 20px;
-    height: 20px;
+    gap: 0;
   }
 
   .filter-item {
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
   }
 
-  .filter-item select {
-    font-size: 14px;
+  /* Thu nhỏ icon mũi tên dropdown ở mobile */
+  .filter-item svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 
-  .filter-search-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-radius: 10px;
+  /* Giảm padding của dropdown indicator */
+  .filter-item [class*="dropdownIndicator"] {
+    padding: 0 4px !important;
   }
 
-  .filter-search-btn svg {
-    width: 16px;
-    height: 16px;
+  /* React-select font size responsive */
+  .filter-item .css-13cymwt-control,
+  .filter-item .css-t3ipsp-control {
+    font-size: 13px;
   }
 
   /* Rooms Section */
@@ -344,9 +333,32 @@
     font-size: 12px;
   }
 
+  /* Filter bar - Giảm tối đa padding */
   .filter-bar-container {
-    padding: 14px;
-    gap: 10px;
+    padding: 0 12px;
+    gap: 6px;
+  }
+
+  .filter-item {
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+
+  /* Thu nhỏ thêm icon mũi tên ở mobile nhỏ */
+  .filter-item svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* Giảm padding của dropdown indicator */
+  .filter-item [class*="dropdownIndicator"] {
+    padding: 0 3px !important;
+  }
+
+  /* React-select font size cho mobile nhỏ */
+  .filter-item .css-13cymwt-control,
+  .filter-item .css-t3ipsp-control {
+    font-size: 12px;
   }
 }
 
@@ -359,7 +371,31 @@
     font-size: 11px;
   }
 
+  /* Filter bar - Tối thiểu padding */
+  .filter-bar-container {
+    padding: 0 10px;
+    gap: 5px;
+  }
+
   .filter-item {
-    padding: 7px 10px;
+    padding: 7px 8px;
+    border-radius: 6px;
+  }
+
+  /* Thu nhỏ tối đa icon mũi tên */
+  .filter-item svg {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  /* Giảm padding của dropdown indicator */
+  .filter-item [class*="dropdownIndicator"] {
+    padding: 0 2px !important;
+  }
+
+  /* React-select font size cho mobile rất nhỏ */
+  .filter-item .css-13cymwt-control,
+  .filter-item .css-t3ipsp-control {
+    font-size: 11px;
   }
 }

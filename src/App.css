@@ -73,11 +73,6 @@ body {
   border-right: none !important;
 }
 
-*, *::before, *::after {
-  border-left: none !important;
-  border-right: none !important;
-}
-
 /* ========== HEADER ========== */
 .header {
   position: fixed;
