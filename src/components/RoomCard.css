@@ -1,7 +1,7 @@
 /* ========== ROOM CARD COMPONENT ========== */
 .property-card {
   background: white;
-  border: 1px solid #D1D5DB;
+  border: 1.5px solid rgba(8, 120, 249, 0.12);
   border-radius: 18px;
   overflow: hidden;
   transition: all 0.35s ease;
@@ -34,7 +34,7 @@
 
 .property-card:hover {
   box-shadow: 0 8px 24px rgba(16, 47, 94, 0.12), 0 0 0 1px rgba(8, 120, 249, 0.12);
-  border-color: rgba(8, 120, 249, 0.25);
+  border-color: rgba(8, 120, 249, 0.3);
 }
 
 /* Image Container */
