@@ -79,6 +79,33 @@
   animation: fadeIn 0.8s ease-out;
 }
 
+/* Custom Scrollbar cho React-Select MenuList */
+.custom-select__menu-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-select__menu-list::-webkit-scrollbar-track {
+  background: rgba(8, 120, 249, 0.05);
+  border-radius: 10px;
+  margin: 4px 0;
+}
+
+.custom-select__menu-list::-webkit-scrollbar-thumb {
+  background: rgba(8, 120, 249, 0.3);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-select__menu-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(8, 120, 249, 0.5);
+}
+
+/* Firefox scrollbar */
+.custom-select__menu-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(8, 120, 249, 0.3) rgba(8, 120, 249, 0.05);
+}
+
 .filter-bar-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -119,7 +146,7 @@
   padding: 12px 16px;
   background: white;
   border: 1.5px solid rgba(8, 120, 249, 0.15);
-  border-radius: 12px;
+  border-radius: 24px;
   transition: all 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
@@ -245,9 +272,9 @@
 @media (max-width: 768px) {
   /* Hero Banner */
   .room-list-hero {
-    padding-top: 78px;
+    padding-top: 70px;
     padding-bottom: 20px;
-    min-height: 180px;
+    min-height: 160px;
   }
 
   .room-list-hero-background {
@@ -271,8 +298,8 @@
   .filter-bar {
     position: static;
     padding: 0;
-    margin-top: 20px;
-    margin-bottom: 24px;
+    margin-top: 15px;
+    margin-bottom: 11px;
   }
 
   .filter-bar-container {
@@ -294,7 +321,7 @@
 
   .filter-item {
     padding: 10px 12px;
-    border-radius: 8px;
+    border-radius: 20px;
   }
 
   /* Thu nhỏ icon mũi tên dropdown ở mobile */
@@ -316,7 +343,7 @@
 
   /* Rooms Section */
   .room-list-rooms {
-    padding: 28px 0 40px;
+    padding: 13px 0 40px;
   }
 
   .room-list-rooms-container {
@@ -341,7 +368,7 @@
 
   .filter-item {
     padding: 8px 10px;
-    border-radius: 6px;
+    border-radius: 18px;
   }
 
   /* Thu nhỏ thêm icon mũi tên ở mobile nhỏ */
@@ -379,7 +406,7 @@
 
   .filter-item {
     padding: 7px 8px;
-    border-radius: 6px;
+    border-radius: 18px;
   }
 
   /* Thu nhỏ tối đa icon mũi tên */

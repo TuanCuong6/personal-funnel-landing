@@ -119,7 +119,28 @@ function RoomList() {
     }),
     menuList: (base) => ({
       ...base,
-      padding: 0
+      padding: 0,
+      maxHeight: '200px',
+      overflowY: 'auto',
+      // Custom scrollbar
+      '&::-webkit-scrollbar': {
+        width: '8px'
+      },
+      '&::-webkit-scrollbar-track': {
+        background: 'rgba(8, 120, 249, 0.05)',
+        borderRadius: '10px',
+        margin: '4px 0'
+      },
+      '&::-webkit-scrollbar-thumb': {
+        background: 'rgba(8, 120, 249, 0.3)',
+        borderRadius: '10px',
+        transition: 'background 0.3s ease'
+      },
+      '&::-webkit-scrollbar-thumb:hover': {
+        background: 'rgba(8, 120, 249, 0.5)'
+      },
+      scrollbarWidth: 'thin',
+      scrollbarColor: 'rgba(8, 120, 249, 0.3) rgba(8, 120, 249, 0.05)'
     }),
     option: (base, state) => ({
       ...base,
@@ -198,6 +219,7 @@ function RoomList() {
                 placeholder="Khu vực"
                 styles={selectStyles}
                 isSearchable={false}
+                classNamePrefix="custom-select"
               />
             </div>
           </div>
@@ -217,6 +239,7 @@ function RoomList() {
                 placeholder="Loại phòng"
                 styles={selectStyles}
                 isSearchable={false}
+                classNamePrefix="custom-select"
               />
             </div>
           </div>
@@ -236,6 +259,7 @@ function RoomList() {
                 placeholder="Mức giá"
                 styles={selectStyles}
                 isSearchable={false}
+                classNamePrefix="custom-select"
               />
             </div>
           </div>
