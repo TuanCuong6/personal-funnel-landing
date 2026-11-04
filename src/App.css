@@ -626,7 +626,7 @@ body {
   align-items: flex-end;
   margin-bottom: 40px;
   margin-left: 0;
-  margin-right: 32px;
+  margin-right: 0;
   flex-wrap: wrap;
   gap: 20px;
   animation: fadeInDown 0.6s ease-out;
@@ -695,46 +695,36 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 11px 20px;
   font-size: 14px;
   font-weight: 600;
   color: var(--primary);
-  background: var(--primary-soft);
-  border: 1px solid var(--primary-light);
-  border-radius: var(--radius-md);
+  background: white;
+  border: 1.5px solid rgba(8, 120, 249, 0.2);
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(8, 120, 249, 0.08);
+  flex-shrink: 0;
 }
 
-.view-all-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(8, 120, 249, 0.1);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-.view-all-btn:hover::before {
-  width: 300px;
-  height: 300px;
+.view-all-btn svg {
+  transition: transform 0.3s ease;
 }
 
 .view-all-btn:hover {
-  background: var(--primary-light);
-  border-color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(8, 120, 249, 0.2);
+  background: linear-gradient(135deg, #F0F7FF 0%, #E8F3FF 100%);
+  border-color: rgba(8, 120, 249, 0.4);
+  box-shadow: 0 4px 12px rgba(8, 120, 249, 0.15);
+  color: #0668DE;
+}
+
+.view-all-btn:hover svg {
+  transform: translateX(3px);
 }
 
 .view-all-btn:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
 /* Rooms Grid */
