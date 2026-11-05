@@ -77,20 +77,25 @@ function RoomList() {
     }),
     valueContainer: (base) => ({
       ...base,
-      padding: 0
+      padding: 0,
+      overflow: 'visible'
     }),
     singleValue: (base) => ({
       ...base,
       color: '#0878F9',
       fontWeight: 500,
-      fontSize: '14px'
+      fontSize: '15px',
+      overflow: 'visible',
+      whiteSpace: 'nowrap'
     }),
     placeholder: (base) => ({
       ...base,
       color: '#0878F9',
       fontWeight: 500,
-      fontSize: '14px',
-      margin: 0
+      fontSize: '15px',
+      margin: 0,
+      overflow: 'visible',
+      whiteSpace: 'nowrap'
     }),
     input: (base) => ({
       ...base,
@@ -103,8 +108,7 @@ function RoomList() {
     dropdownIndicator: (base) => ({
       ...base,
       color: '#0878F9',
-      padding: 0,
-      paddingLeft: '8px',
+      padding: '0 0 0 4px',
       '&:hover': {
         color: '#0878F9'
       }
@@ -149,7 +153,7 @@ function RoomList() {
       fontWeight: state.isSelected ? 500 : 400,
       cursor: 'pointer',
       padding: '12px 16px',
-      fontSize: '14px',
+      fontSize: '15px',
       '&:active': {
         backgroundColor: '#EBF5FF'
       }

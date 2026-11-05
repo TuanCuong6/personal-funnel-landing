@@ -338,7 +338,16 @@
   /* React-select font size responsive */
   .filter-item .css-13cymwt-control,
   .filter-item .css-t3ipsp-control {
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+  .custom-select__single-value,
+  .custom-select__placeholder {
+    font-size: 12px !important;
+  }
+
+  .custom-select__option {
+    font-size: 12px !important;
   }
 
   /* Rooms Section */
@@ -385,7 +394,16 @@
   /* React-select font size cho mobile nhỏ */
   .filter-item .css-13cymwt-control,
   .filter-item .css-t3ipsp-control {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  .custom-select__single-value,
+  .custom-select__placeholder {
+    font-size: 11px !important;
+  }
+
+  .custom-select__option {
+    font-size: 11px !important;
   }
 }
 
@@ -423,7 +441,16 @@
   /* React-select font size cho mobile rất nhỏ */
   .filter-item .css-13cymwt-control,
   .filter-item .css-t3ipsp-control {
-    font-size: 11px;
+    font-size: 10.5px;
+  }
+
+  .custom-select__single-value,
+  .custom-select__placeholder {
+    font-size: 10.5px !important;
+  }
+
+  .custom-select__option {
+    font-size: 10.5px !important;
   }
 }
 
@@ -441,12 +468,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
-  height: 40px;
-  padding: 0 12px;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
   border: none;
-  border-radius: 12px;
-  font-size: 14px;
+  border-radius: 10px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -521,10 +548,10 @@
   }
 
   .pagination-btn {
-    min-width: 40px;
-    height: 40px;
-    font-size: 14px;
-    border-radius: 12px;
+    min-width: 34px;
+    height: 34px;
+    font-size: 12px;
+    border-radius: 9px;
   }
 }
 
@@ -534,9 +561,9 @@
   }
 
   .pagination-btn {
-    min-width: 38px;
-    height: 38px;
-    font-size: 13px;
-    border-radius: 11px;
+    min-width: 32px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 8px;
   }
 }
